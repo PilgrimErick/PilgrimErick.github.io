@@ -4,23 +4,6 @@
 
     
   <url>
-    <loc>https://linyk.me/2017/04/11/xh001/</loc>
-    <lastmod>2017-09-07T00:57:53.374Z</lastmod>
-    <data>
-        <display>
-        <title>【小海的故事】001 中二少年小海</title>
-        <pubTime>2017-04-11T05:22:51.000Z</pubTime>
-        
-        <tag>小海的故事</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://linyk.me/2017/03/29/react-guide/</loc>
     <lastmod>2017-09-07T00:57:53.374Z</lastmod>
     <data>
