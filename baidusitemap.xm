@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://linyk.me/2017/03/23/hello-world/</loc>
+    <lastmod>2017-09-07T01:33:33.852Z</lastmod>
+    <data>
+        <display>
+        <title>Hello My World</title>
+        <pubTime>2017-03-23T02:07:07.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://linyk.me/2017/03/29/react-guide/</loc>
     <lastmod>2017-09-07T00:57:53.374Z</lastmod>
     <data>
@@ -55,23 +72,6 @@
 
     
   <url>
-    <loc>https://linyk.me/2017/03/31/babel-usage/</loc>
-    <lastmod>2017-09-07T00:57:53.372Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6.0之babel-cli和babel-core的用法和区别</title>
-        <pubTime>2017-03-30T22:12:52.000Z</pubTime>
-        
-        <tag>Babel</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://linyk.me/2017/03/31/chrome-date-bug/</loc>
     <lastmod>2017-09-07T00:57:53.372Z</lastmod>
     <data>
@@ -89,14 +89,14 @@
 
     
   <url>
-    <loc>https://linyk.me/2017/03/23/hello-world/</loc>
+    <loc>https://linyk.me/2017/03/31/babel-usage/</loc>
     <lastmod>2017-09-07T00:57:53.372Z</lastmod>
     <data>
         <display>
-        <title>Hello My World</title>
-        <pubTime>2017-03-23T02:07:07.000Z</pubTime>
+        <title>Babel 6.0之babel-cli和babel-core的用法和区别</title>
+        <pubTime>2017-03-30T22:12:52.000Z</pubTime>
         
-        <tag>随笔</tag>
+        <tag>Babel</tag>
          
          
            

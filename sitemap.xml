@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://linyk.me/2017/03/23/hello-world/</loc>
+    
+    <lastmod>2017-09-07T01:33:33.852Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://linyk.me/2017/03/29/react-guide/</loc>
     
     <lastmod>2017-09-07T00:57:53.374Z</lastmod>
@@ -23,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://linyk.me/2017/03/31/babel-usage/</loc>
-    
-    <lastmod>2017-09-07T00:57:53.372Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://linyk.me/2017/03/31/chrome-date-bug/</loc>
     
     <lastmod>2017-09-07T00:57:53.372Z</lastmod>
@@ -37,7 +37,7 @@
   </url>
   
   <url>
-    <loc>https://linyk.me/2017/03/23/hello-world/</loc>
+    <loc>https://linyk.me/2017/03/31/babel-usage/</loc>
     
     <lastmod>2017-09-07T00:57:53.372Z</lastmod>
     
