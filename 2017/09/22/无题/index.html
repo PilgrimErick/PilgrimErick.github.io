@@ -9,22 +9,22 @@
   <meta name="baidu-site-verification" content="k1wy5Amy7s" />
   <meta name="keywords" content="前端知识, CSS, javascript, Erick博客, 林粤凯">
   <link rel="dns-prefetch" href="https://linyk.me">
-  <title>【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop) | Erick的博客</title>
+  <title>无题 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一. 单线程我们常说“JavaScript是单线程的”。 所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它主线程。 但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们工作线程。">
-<meta name="keywords" content="Javascript">
+  <meta name="description" content="心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。 …… 也许仍需以”谁对谁错”分析切入。然，此间详细，原本属于门内堂前家务事，若为外人道哉，徒惹笑料！ 于是各自寡言少语，目光冷漠，沉浸自我世界自苦自怨，自我感动，互施冷暴，绝食抗议……不禁凄然自嘲：可悲，牛毛小事竟成此恨根源！ 且不论对错，男人本该主动做出让步，方显大度。在很多矛盾上可以这样处理，但若涉及原则问题，理念未被支持，行">
+<meta name="keywords" content="情绪">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop)">
-<meta property="og:url" content="https://linyk.me/2017/03/23/js-event-loop/index.html">
+<meta property="og:title" content="无题">
+<meta property="og:url" content="https://linyk.me/2017/09/22/无题/index.html">
 <meta property="og:site_name" content="Erick的博客">
-<meta property="og:description" content="一. 单线程我们常说“JavaScript是单线程的”。 所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它主线程。 但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们工作线程。">
+<meta property="og:description" content="心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。 …… 也许仍需以”谁对谁错”分析切入。然，此间详细，原本属于门内堂前家务事，若为外人道哉，徒惹笑料！ 于是各自寡言少语，目光冷漠，沉浸自我世界自苦自怨，自我感动，互施冷暴，绝食抗议……不禁凄然自嘲：可悲，牛毛小事竟成此恨根源！ 且不论对错，男人本该主动做出让步，方显大度。在很多矛盾上可以这样处理，但若涉及原则问题，理念未被支持，行">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="https://linyk.me/images/3259161542-575018ce29d44_articlex.png">
-<meta property="og:updated_time" content="2017-09-07T00:57:53.373Z">
+<meta property="og:image" content="https://linyk.me/images/sad.jpg">
+<meta property="og:updated_time" content="2017-09-22T00:56:08.725Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop)">
-<meta name="twitter:description" content="一. 单线程我们常说“JavaScript是单线程的”。 所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它主线程。 但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们工作线程。">
-<meta name="twitter:image" content="https://linyk.me/images/3259161542-575018ce29d44_articlex.png">
+<meta name="twitter:title" content="无题">
+<meta name="twitter:description" content="心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。 …… 也许仍需以”谁对谁错”分析切入。然，此间详细，原本属于门内堂前家务事，若为外人道哉，徒惹笑料！ 于是各自寡言少语，目光冷漠，沉浸自我世界自苦自怨，自我感动，互施冷暴，绝食抗议……不禁凄然自嘲：可悲，牛毛小事竟成此恨根源！ 且不论对错，男人本该主动做出让步，方显大度。在很多矛盾上可以这样处理，但若涉及原则问题，理念未被支持，行">
+<meta name="twitter:image" content="https://linyk.me/images/sad.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Erick的博客" type="application/atom+xml">
   
@@ -180,24 +180,24 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js-event-loop" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-无题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop)
+      无题
     </h1>
   
 
         
-        <a href="/2017/03/23/js-event-loop/" class="archive-article-date">
-  	<time datetime="2017-03-23T07:07:07.000Z" itemprop="datePublished">
+        <a href="/2017/09/22/无题/" class="archive-article-date">
+  	<time datetime="2017-09-22T00:49:45.000Z" itemprop="datePublished">
   		<i class="icon-calendar icon"></i>
   		
   		
-  		2017-03-23
+  		今天
   		
   	</time>
 </a>
@@ -206,116 +206,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一-单线程"><a href="#一-单线程" class="headerlink" title="一. 单线程"></a>一. 单线程</h2><p>我们常说“JavaScript是单线程的”。</p>
-<p>所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它<strong>主线程</strong>。</p>
-<p>但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们<strong>工作线程</strong>。</p>
+        <p>心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。</p>
+<p>……</p>
+<p>也许仍需以”谁对谁错”分析切入。然，此间详细，原本属于门内堂前家务事，若为外人道哉，徒惹笑料！</p>
+<p>于是各自寡言少语，目光冷漠，沉浸自我世界自苦自怨，自我感动，互施冷暴，绝食抗议……不禁凄然自嘲：可悲，牛毛小事竟成此恨根源！</p>
+<p>且不论对错，男人本该主动做出让步，方显大度。在很多矛盾上可以这样处理，但若涉及原则问题，理念未被支持，行事遭受质疑，苦衷不得理解，又当如何？</p>
+<p>各执一词，各持一念，互感不被理解，拒绝沟通，以至陷入僵局，泥泞深潭，无法自拔，长此以往，心寒更甚，最终无非心死一途。</p>
+<p>……</p>
+<p>心有余然力有不逮……</p>
+<p>如人饮水，冷暖自知……</p>
 <a id="more"></a>
-<h2 id="二-同步和异步"><a href="#二-同步和异步" class="headerlink" title="二. 同步和异步"></a>二. 同步和异步</h2><p>假设存在一个函数A：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A(args...);</div></pre></td></tr></table></figure></p>
-<p><strong>同步</strong>：如果在函数A返回的时候，调用者就能够得到预期结果(即拿到了预期的返回值或者看到了预期的效果)，那么这个函数就是同步的。</p>
-<p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hi'</span>);</div></pre></td></tr></table></figure>
-<ul>
-<li>第一个函数返回时，就拿到了预期的返回值：2的平方根。</li>
-<li>第二个函数返回时，就看到了预期的效果：在控制台打印了一个字符串。</li>
-</ul>
-<p>所以这两个函数都是同步的。</p>
-<p><strong>异步</strong>：如果在函数A返回的时候，调用者还不能够得到预期结果，而是需要在将来通过一定的手段得到，那么这个函数就是异步的。</p>
-<p>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fs.readFile(<span class="string">'foo.txt'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>在上面的代码中，我们希望通过<code>fs.readFile</code>函数读取文件foo.txt中的内容，并打印出来。<br>但是在<code>fs.readFile</code>函数返回时，我们期望的结果并不会发生，而是要等到文件全部读取完成之后。如果文件很大的话可能要很长时间。</p>
-<p>下面以AJAX请求为例，来看一下同步和异步的区别：</p>
-<ul>
-<li>异步AJAX：<blockquote>
-<ul>
-<li>主线程：“你好，AJAX线程。请你帮我发个HTTP请求吧，我把请求地址和参数都给你了。”</li>
-<li>AJAX线程：“好的，主线程。我马上去发，但可能要花点儿时间呢，你可以先去忙别的。”</li>
-<li>主线程：：“谢谢，你拿到响应后告诉我一声啊。”</li>
-<li>(接着，主线程做其他事情去了。一顿饭的时间后，它收到了响应到达的通知。)</li>
-</ul>
-</blockquote>
-</li>
-<li>同步AJAX：<blockquote>
-<ul>
-<li>主线程：“你好，AJAX线程。请你帮我发个HTTP请求吧，我把请求地址和参数都给你了。”</li>
-<li>AJAX线程：“……”</li>
-<li>主线程：：“喂，AJAX线程，你怎么不说话？”</li>
-<li>AJAX线程：“……”</li>
-<li>主线程：：“喂！喂喂喂！”</li>
-<li>AJAX线程：“……”</li>
-<li>(一炷香的时间后)</li>
-<li>主线程：：“喂！求你说句话吧！”</li>
-<li>AJAX线程：“主线程，不好意思，我在工作的时候不能说话。你的请求已经发完了，拿到响应数据了，给你。”</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<p>正是由于JavaScript是单线程的，而异步容易实现非阻塞，所以在JavaScript中对于耗时的操作或者时间不确定的操作，使用异步就成了必然的选择。异步是这篇文章关注的重点。</p>
-<h2 id="三-异步过程的构成要素"><a href="#三-异步过程的构成要素" class="headerlink" title="三. 异步过程的构成要素"></a>三. 异步过程的构成要素</h2><p>从上文可以看出，异步函数实际上很快就调用完成了。但是后面还有工作线程执行异步任务、通知主线程、主线程调用回调函数等很多步骤。我们把整个过程叫做异步过程。异步函数的调用在整个异步过程中，只是一小部分。</p>
-<p>总结一下，一个异步过程通常是这样的：</p>
-<blockquote>
-<p>主线程发起一个异步请求，相应的工作线程接收请求并告知主线程已收到(异步函数返回)；主线程可以继续执行后面的代码，同时工作线程执行异步任务；工作线程完成工作后，通知主线程；主线程收到通知后，执行一定的动作(调用回调函数)。</p>
-</blockquote>
-<p>异步函数通常具有以下的形式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A(args..., callbackFn)</div></pre></td></tr></table></figure>
-<p>它可以叫做异步过程的发起函数，或者叫做异步任务注册函数。<code>args</code>是这个函数需要的参数。<code>callbackFn</code>也是这个函数的参数，但是它比较特殊所以单独列出来。</p>
-<p>所以，从主线程的角度看，一个异步过程包括下面两个要素：</p>
-<blockquote>
-<p><em>发起函数(或叫注册函数)<code>A</code>
-</em>回调函数<code>callbackFn</code></p>
-</blockquote>
-<p>它们都是在主线程上调用的，其中注册函数用来发起异步过程，回调函数用来处理结果。</p>
-<p>举个具体的例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setTimeout(fn, <span class="number">1000</span>);</div></pre></td></tr></table></figure>
-<p>其中的<code>setTimeout</code>就是异步过程的发起函数，<code>fn</code>是回调函数。</p>
-<p>注意：前面说的形式<code>A(args..., callbackFn)</code>只是一种抽象的表示，并不代表回调函数一定要作为发起函数的参数，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.onreadystatechange = xxx; <span class="comment">// 添加回调函数</span></div><div class="line">xhr.open(<span class="string">'GET'</span>, url);</div><div class="line">xhr.send(); <span class="comment">// 发起函数</span></div></pre></td></tr></table></figure>
-<p>发起函数和回调函数就是分离的。</p>
-<h2 id="四-消息队列和事件循环"><a href="#四-消息队列和事件循环" class="headerlink" title="四. 消息队列和事件循环"></a>四. 消息队列和事件循环</h2><p>上文讲到，异步过程中，工作线程在异步操作完成后需要通知主线程。那么这个通知机制是怎样实现的呢？答案是利用消息队列和事件循环。</p>
-<p>用一句话概括：</p>
-<blockquote>
-<p>*工作线程将消息放到消息队列，主线程通过事件循环过程去取消息。</p>
-</blockquote>
-<ul>
-<li>消息队列：消息队列是一个先进先出的队列，它里面存放着各种消息。</li>
-<li>事件循环：事件循环是指主线程重复从消息队列中取消息、执行的过程。</li>
-</ul>
-<p>实际上，主线程只会做一件事情，就是从消息队列里面取消息、执行消息，再取消息、再执行。当消息队列为空时，就会等待直到消息队列变成非空。而且主线程只有在将当前的消息执行完成后，才会去取下一个消息。这种机制就叫做事件循环机制，取一个消息并执行的过程叫做一次循环。</p>
-<p>事件循环用代码表示大概是这样的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">var</span> message = queue.get();</div><div class="line">    execute(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>那么，消息队列中放的消息具体是什么东西？消息的具体结构当然跟具体的实现有关，但是为了简单起见，我们可以认为：</p>
-<p>消息就是注册异步任务时添加的回调函数。<br>再次以异步AJAX为例，假设存在如下的代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(<span class="string">'http://segmentfault.com'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">resp</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'我是响应：'</span>, resp);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 其他代码</span></div><div class="line">...</div><div class="line">...</div><div class="line">...</div></pre></td></tr></table></figure>
-<p>主线程在发起AJAX请求后，会继续执行其他代码。AJAX线程负责请求segmentfault.com，拿到响应后，它会把响应封装成一个JavaScript对象，然后构造一条消息：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 消息队列中的消息就长这个样子</span></div><div class="line"><span class="keyword">var</span> message = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    callbackFn(response);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>其中的<code>callbackFn</code>就是前面代码中得到成功响应时的回调函数。</p>
-<p>主线程在执行完当前循环中的所有代码后，就会到消息队列取出这条消息(也就是<code>message</code>函数)，并执行它。到此为止，就完成了工作线程对主线程的通知，回调函数也就得到了执行。如果一开始主线程就没有提供回调函数，AJAX线程在收到HTTP响应后，也就没必要通知主线程，从而也没必要往消息队列放消息。</p>
-<p>用图表示这个过程就是：</p>
-<p><img src="/images/3259161542-575018ce29d44_articlex.png" alt="图表"></p>
-<p>从上文中我们也可以得到这样一个明显的结论，就是：</p>
-<blockquote>
-<p>异步过程的回调函数，一定不在当前这一轮事件循环中执行。</p>
-</blockquote>
-<h2 id="五-异步与事件"><a href="#五-异步与事件" class="headerlink" title="五. 异步与事件"></a>五. 异步与事件</h2><p>上文中说的“事件循环”，为什么里面有个<code>事件</code>呢？那是因为：</p>
-<blockquote>
-<p>消息队列中的每条消息实际上都对应着一个事件。</p>
-</blockquote>
-<p>上文中一直没有提到一类很重要的异步过程：<strong>DOM事件</strong>。</p>
-<p>举例来说：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElement(<span class="string">'#btn'</span>);</div><div class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>从事件的角度来看，上述代码表示：在按钮上添加了一个鼠标单击事件的事件监听器；当用户点击按钮时，鼠标单击事件触发，事件监听器函数被调用。</p>
-<p>从异步过程的角度看，<code>addEventListener</code>函数就是异步过程的发起函数，事件监听器函数就是异步过程的回调函数。事件触发时，表示异步任务完成，会将事件监听器函数封装成一条消息放到消息队列中，等待主线程执行。</p>
-<p><strong>事件</strong>的概念实际上并不是必须的，事件机制实际上就是异步过程的通知机制。我觉得它的存在是为了编程接口对开发者更友好。</p>
-<p>另一方面，所有的异步过程也都可以用事件来描述。例如：<code>setTimeout</code>可以看成对应一个时间到了！的事件。前文的<code>setTimeout(fn, 1000);</code>可以看成：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">timer.addEventListener(<span class="string">'timeout'</span>, <span class="number">1000</span>, fn);</div></pre></td></tr></table></figure>
-<h2 id="六-生产者与消费者"><a href="#六-生产者与消费者" class="headerlink" title="六. 生产者与消费者"></a>六. 生产者与消费者</h2><p>从生产者与消费者的角度看，异步过程是这样的：</p>
-<blockquote>
-<p>工作线程是生产者，主线程是消费者(只有一个消费者)。工作线程执行异步任务，执行完成后把对应的回调函数封装成一条消息放到消息队列中；主线程不断地从消息队列中取消息并执行，当消息队列空时主线程阻塞，直到消息队列再次非空。</p>
-</blockquote>
-<h2 id="七-总结一下"><a href="#七-总结一下" class="headerlink" title="七. 总结一下"></a>七. 总结一下</h2><p>最后再用一个生活中的例子总结一下同步和异步：在公路上，汽车一辆接一辆，有条不紊的运行。这时，有一辆车坏掉了。假如它停在原地进行修理，那么后面的车就会被堵住没法行驶，交通就乱套了。幸好旁边有应急车道，可以把故障车辆推到应急车道修理，而正常的车流不会受到任何影响。等车修好了，再从应急车道回到正常车道即可。唯一的影响就是，应急车道用多了，原来的车辆之间的顺序会有点乱。</p>
-<p>这就是同步和异步的区别。同步可以保证顺序一致，但是容易导致阻塞；异步可以解决阻塞问题，但是会改变顺序性。改变顺序性其实也没有什么大不了的，只不过让程序变得稍微难理解了一些 :)</p>
-<p>PS：ECMAScript 262规范中，并没有对异步、事件队列等概念及其实现的描述。这些都是具体的JavaScript运行时环境使用的机制。本文重点是描述异步过程的原理，为了便于理解做了很多简化。所以文中的某些术语的使用可能是不准确的，具体细节也未必是正确的，例如消息队列中消息的结构。请读者注意。</p>
-<blockquote>
-<p>PS:本文转载自 <a href="https://segmentfault.com/a/1190000004322358" target="_blank" rel="external">https://segmentfault.com/a/1190000004322358</a></p>
-</blockquote>
+<p><img src="/images/sad.jpg" alt="待此间事了，携你看尽人间繁华..."></p>
 
       
 
@@ -329,7 +230,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">情绪</a>
         		</li>
       		
 		</ul>
@@ -385,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/03/23/js-event-loop/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/09/22/无题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -399,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/24/hexo-github-pages/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          使用Hexo，如何在多台电脑上维护和更新github pages博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello My World</div>
+    <a href="/2017/03/31/chrome-date-bug/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">new Date解析日期字符串在不同浏览器的差异</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -429,7 +321,7 @@
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop)" ></div> 
+<div id="SOHUCS" sid="无题" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cysUy3hml'; 
