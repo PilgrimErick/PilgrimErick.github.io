@@ -11,18 +11,18 @@
   <link rel="dns-prefetch" href="https://linyk.me">
   <title>Javascript呈现星星评分效果的最简单实现 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为评分，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
+  <meta name="description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript呈现星星评分效果的最简单实现">
 <meta property="og:url" content="https://linyk.me/2017/10/13/呈现星星评分效果的最简单实现/index.html">
 <meta property="og:site_name" content="Erick的博客">
-<meta property="og:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为评分，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
+<meta property="og:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-10-13T07:35:05.737Z">
+<meta property="og:updated_time" content="2017-10-13T07:38:43.881Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript呈现星星评分效果的最简单实现">
-<meta name="twitter:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为评分，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
+<meta name="twitter:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
   
     <link rel="alternative" href="/atom.xml" title="Erick的博客" type="application/atom+xml">
   
@@ -202,7 +202,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *  score为评分，范围为0-5 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">stars</span>(<span class="params">score</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"★★★★★☆☆☆☆☆"</span>.substr(<span class="number">5</span>-score, <span class="number">5</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">stars(<span class="number">3</span>);   <span class="comment">//★★★☆☆</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *  score为分值，范围为0-5 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">stars</span>(<span class="params">score</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"★★★★★☆☆☆☆☆"</span>.substr(<span class="number">5</span>-score, <span class="number">5</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">stars(<span class="number">3</span>);   <span class="comment">//★★★☆☆</span></div></pre></td></tr></table></figure>
       
 
       
