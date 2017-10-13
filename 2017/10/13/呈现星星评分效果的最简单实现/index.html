@@ -9,20 +9,20 @@
   <meta name="baidu-site-verification" content="k1wy5Amy7s" />
   <meta name="keywords" content="林粤凯, linyk">
   <link rel="dns-prefetch" href="https://linyk.me">
-  <title>Hello My World | Erick的博客</title>
+  <title>Javascript呈现星星评分效果的最简单实现 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="终于，尘埃落定，我最终决定个人博客域名还是让linyk——我的名字拼音缩写——来承担这个重任！！ 有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为评分，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello My World">
-<meta property="og:url" content="https://linyk.me/2017/03/23/hello-world/index.html">
+<meta property="og:title" content="Javascript呈现星星评分效果的最简单实现">
+<meta property="og:url" content="https://linyk.me/2017/10/13/呈现星星评分效果的最简单实现/index.html">
 <meta property="og:site_name" content="Erick的博客">
-<meta property="og:description" content="终于，尘埃落定，我最终决定个人博客域名还是让linyk——我的名字拼音缩写——来承担这个重任！！ 有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。">
+<meta property="og:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为评分，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-07T01:33:33.852Z">
+<meta property="og:updated_time" content="2017-10-13T07:35:05.737Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello My World">
-<meta name="twitter:description" content="终于，尘埃落定，我最终决定个人博客域名还是让linyk——我的名字拼音缩写——来承担这个重任！！ 有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。">
+<meta name="twitter:title" content="Javascript呈现星星评分效果的最简单实现">
+<meta name="twitter:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为评分，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5-score, 5);&amp;#125;stars(3);   //★★★☆☆">
   
     <link rel="alternative" href="/atom.xml" title="Erick的博客" type="application/atom+xml">
   
@@ -178,22 +178,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-呈现星星评分效果的最简单实现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello My World
+      Javascript呈现星星评分效果的最简单实现
     </h1>
   
 
         
-        <a href="/2017/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-23T02:07:07.000Z" itemprop="datePublished">
+        <a href="/2017/10/13/呈现星星评分效果的最简单实现/" class="archive-article-date">
+  	<time datetime="2017-10-13T07:30:28.000Z" itemprop="datePublished">
   		<i class="icon-calendar icon"></i>
-  		2017-03-23
+  		2017-10-13
   	</time>
 </a>
         
@@ -201,15 +201,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>终于，尘埃落定，我最终决定个人博客域名还是让<code>linyk</code>——我的名字拼音缩写——来承担这个重任！！</p>
-<p>有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。</p>
-<a id="more"></a>
-<p>我感到前所未有的自由~~</p>
-<p>然而，我是个懒人，能坚持更新吗？坚持多久呢？嘛，谁也说不清楚，有灵感就会来这儿划上一笔的！</p>
-<blockquote>
-<p>PS：本博客当前使用的是 <a href="https://github.com/litten" target="_blank" rel="external">litten</a> 提供的 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a> 主题，这个风格我很喜欢，特此感谢！</p>
-</blockquote>
-
+        <p>今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *  score为评分，范围为0-5 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">stars</span>(<span class="params">score</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"★★★★★☆☆☆☆☆"</span>.substr(<span class="number">5</span>-score, <span class="number">5</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">stars(<span class="number">3</span>);   <span class="comment">//★★★☆☆</span></div></pre></td></tr></table></figure>
       
 
       
@@ -222,7 +215,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
         		</li>
       		
 		</ul>
@@ -278,7 +271,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/03/23/hello-world/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/10/13/呈现星星评分效果的最简单实现/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,15 +285,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/23/js-event-loop/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop)
-        
-      </div>
-    </a>
   
+    <a href="/2017/09/22/无题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">两人之间（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -317,7 +306,7 @@
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="Hello My World" ></div> 
+<div id="SOHUCS" sid="Javascript呈现星星评分效果的最简单实现" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cysUy3hml'; 
