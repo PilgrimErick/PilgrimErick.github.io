@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>https://linyk.me/2017/10/13/%E5%91%88%E7%8E%B0%E6%98%9F%E6%98%9F%E8%AF%84%E5%88%86%E6%95%88%E6%9E%9C%E7%9A%84%E6%9C%80%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
+    <loc>https://linyk.me/2017/10/13/stars-score/</loc>
     <lastmod>2017-10-13T07:39:06.813Z</lastmod>
     <data>
         <display>
@@ -21,7 +21,7 @@
 
     
   <url>
-    <loc>https://linyk.me/2017/09/22/%E6%97%A0%E9%A2%98/</loc>
+    <loc>https://linyk.me/2017/09/22/sad/</loc>
     <lastmod>2017-09-26T08:16:23.394Z</lastmod>
     <data>
         <display>

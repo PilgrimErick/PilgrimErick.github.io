@@ -9,22 +9,20 @@
   <meta name="baidu-site-verification" content="k1wy5Amy7s" />
   <meta name="keywords" content="林粤凯, linyk">
   <link rel="dns-prefetch" href="https://linyk.me">
-  <title>两人之间（一） | Erick的博客</title>
+  <title>Javascript呈现星星评分效果的最简单实现 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。 ……">
-<meta name="keywords" content="情绪">
+  <meta name="description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5 - score, 5);&amp;#125;stars(3);   //★★★☆☆">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两人之间（一）">
-<meta property="og:url" content="https://linyk.me/2017/09/22/无题/index.html">
+<meta property="og:title" content="Javascript呈现星星评分效果的最简单实现">
+<meta property="og:url" content="https://linyk.me/2017/10/13/stars-score/index.html">
 <meta property="og:site_name" content="Erick的博客">
-<meta property="og:description" content="心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。 ……">
+<meta property="og:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5 - score, 5);&amp;#125;stars(3);   //★★★☆☆">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="https://linyk.me/images/sad.jpg">
-<meta property="og:updated_time" content="2017-09-26T08:16:23.394Z">
+<meta property="og:updated_time" content="2017-10-13T07:39:06.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两人之间（一）">
-<meta name="twitter:description" content="心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。 ……">
-<meta name="twitter:image" content="https://linyk.me/images/sad.jpg">
+<meta name="twitter:title" content="Javascript呈现星星评分效果的最简单实现">
+<meta name="twitter:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5 - score, 5);&amp;#125;stars(3);   //★★★☆☆">
   
     <link rel="alternative" href="/atom.xml" title="Erick的博客" type="application/atom+xml">
   
@@ -180,22 +178,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-无题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-stars-score" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      两人之间（一）
+      Javascript呈现星星评分效果的最简单实现
     </h1>
   
 
         
-        <a href="/2017/09/22/无题/" class="archive-article-date">
-  	<time datetime="2017-09-22T00:49:45.000Z" itemprop="datePublished">
+        <a href="/2017/10/13/stars-score/" class="archive-article-date">
+  	<time datetime="2017-10-13T07:30:28.000Z" itemprop="datePublished">
   		<i class="icon-calendar icon"></i>
-  		2017-09-22
+  		2017-10-13
   	</time>
 </a>
         
@@ -203,18 +201,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>心绪繁杂，情难自禁，欲抒己意，指悬半空，凝滞良久，竟不知从何说起。</p>
-<p>……</p>
-<a id="more"></a>
-<p>也许仍需以”谁对谁错”分析切入。然，此间详细，原本属于门内堂前家务事，若为外人道哉，徒惹笑料！</p>
-<p>于是各自寡言少语，目光冷漠，沉浸自我世界自苦自怨，自我感动，互施冷暴，绝食抗议……不禁凄然自嘲：可悲，牛毛小事竟成此恨根源！</p>
-<p>且不论对错，男人本该主动做出让步，方显大度。在很多矛盾上可以这样处理，但若涉及原则问题，理念未被支持，行事遭受质疑，苦衷不得理解，又当如何？</p>
-<p>各执一词，各持一念，互感不被理解，拒绝沟通，以至陷入僵局，泥泞深潭，无法自拔，长此以往，心寒更甚，最终无非心死一途。</p>
-<p>……</p>
-<p>心有余然力有不逮……</p>
-<p>如人饮水，冷暖自知……</p>
-<p><img src="/images/sad.jpg" alt="待此间事了，携你看尽人间繁华..."></p>
-
+        <p>今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *  score为分值，范围为0-5 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">stars</span>(<span class="params">score</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"★★★★★☆☆☆☆☆"</span>.substr(<span class="number">5</span> - score, <span class="number">5</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">stars(<span class="number">3</span>);   <span class="comment">//★★★☆☆</span></div></pre></td></tr></table></figure>
       
 
       
@@ -227,7 +215,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">情绪</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
         		</li>
       		
 		</ul>
@@ -283,7 +271,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/09/22/无题/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/10/13/stars-score/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,18 +285,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/13/呈现星星评分效果的最简单实现/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Javascript呈现星星评分效果的最简单实现
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/31/chrome-date-bug/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">new Date解析日期字符串在不同浏览器的差异</div>
+    <a href="/2017/09/22/sad/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">两人之间（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -327,7 +306,7 @@
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="两人之间（一）" ></div> 
+<div id="SOHUCS" sid="Javascript呈现星星评分效果的最简单实现" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cysUy3hml'; 
