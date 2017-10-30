@@ -11,6 +11,23 @@
   <link rel="dns-prefetch" href="https://linyk.me">
   <title>使用Hexo，如何在多台电脑上维护和更新github pages博客 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script>
+  (function(){
+    if('undefined' !== 'undefined'){
+      if(sessionStorage.getItem(location.pathname) != 'undefined'){
+        var p = eval("\u0070\u0072\u006f\u006d\u0070\u0074\u0028\'\u8bf7\u8f93\u5165\u6587\u7ae0\u5bc6\u7801\'\u0029\u003b");
+        if (p === 'undefined'){
+          sessionStorage.setItem(location.pathname, 'undefined');
+        }else{
+          if(p !== null){
+            eval("\u0061\u006c\u0065\u0072\u0074\u0028\'\u5bc6\u7801\u9519\u8bef\uff01\'\u0029\u003b");
+          }
+          history.back();
+        }
+      }
+    }
+  })();
+  </script>
   <meta name="description" content="今天在公司用hexo搭好博客之后，突然有个疑问：我想要回到家继续写文章，那换了电脑之后该怎么更新博客呢？ 思路：使用git分支。 即用个人博客仓库的master分支来保存博客静态页面，新建另一个分支来保存hexo部署环境目录！之后每次博客的更新就在新分支上编辑和发布（deploy），把生成的博客页面推到master分支上。 话不多说，下面是我实践的方法（前四步是在公司电脑上，第五步是家里的电脑）：">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
@@ -20,7 +37,7 @@
 <meta property="og:description" content="今天在公司用hexo搭好博客之后，突然有个疑问：我想要回到家继续写文章，那换了电脑之后该怎么更新博客呢？ 思路：使用git分支。 即用个人博客仓库的master分支来保存博客静态页面，新建另一个分支来保存hexo部署环境目录！之后每次博客的更新就在新分支上编辑和发布（deploy），把生成的博客页面推到master分支上。 话不多说，下面是我实践的方法（前四步是在公司电脑上，第五步是家里的电脑）：">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="https://linyk.me/images/9U31M0VVJ.png">
-<meta property="og:updated_time" content="2017-09-07T00:57:53.373Z">
+<meta property="og:updated_time" content="2017-10-30T04:04:33.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo，如何在多台电脑上维护和更新github pages博客">
 <meta name="twitter:description" content="今天在公司用hexo搭好博客之后，突然有个疑问：我想要回到家继续写文章，那换了电脑之后该怎么更新博客呢？ 思路：使用git分支。 即用个人博客仓库的master分支来保存博客静态页面，新建另一个分支来保存hexo部署环境目录！之后每次博客的更新就在新分支上编辑和发布（deploy），把生成的博客页面推到master分支上。 话不多说，下面是我实践的方法（前四步是在公司电脑上，第五步是家里的电脑）：">

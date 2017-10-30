@@ -11,6 +11,23 @@
   <link rel="dns-prefetch" href="https://linyk.me">
   <title>Javascript呈现星星评分效果的最简单实现 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script>
+  (function(){
+    if('undefined' !== 'undefined'){
+      if(sessionStorage.getItem(location.pathname) != 'undefined'){
+        var p = eval("\u0070\u0072\u006f\u006d\u0070\u0074\u0028\'\u8bf7\u8f93\u5165\u6587\u7ae0\u5bc6\u7801\'\u0029\u003b");
+        if (p === 'undefined'){
+          sessionStorage.setItem(location.pathname, 'undefined');
+        }else{
+          if(p !== null){
+            eval("\u0061\u006c\u0065\u0072\u0074\u0028\'\u5bc6\u7801\u9519\u8bef\uff01\'\u0029\u003b");
+          }
+          history.back();
+        }
+      }
+    }
+  })();
+  </script>
   <meta name="description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5 - score, 5);&amp;#125;stars(3);   //★★★☆☆">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
@@ -19,7 +36,7 @@
 <meta property="og:site_name" content="Erick的博客">
 <meta property="og:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5 - score, 5);&amp;#125;stars(3);   //★★★☆☆">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-10-13T07:39:06.813Z">
+<meta property="og:updated_time" content="2017-10-30T04:04:41.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript呈现星星评分效果的最简单实现">
 <meta name="twitter:description" content="今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码： 12345678/* *  score为分值，范围为0-5  */function stars(score)&amp;#123;  return &quot;★★★★★☆☆☆☆☆&quot;.substr(5 - score, 5);&amp;#125;stars(3);   //★★★☆☆">

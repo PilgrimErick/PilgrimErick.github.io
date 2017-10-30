@@ -11,6 +11,23 @@
   <link rel="dns-prefetch" href="https://linyk.me">
   <title>404！啊哦，不好意思，页面不见了... | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script>
+  (function(){
+    if('undefined' !== 'undefined'){
+      if(sessionStorage.getItem(location.pathname) != 'undefined'){
+        var p = eval("\u0070\u0072\u006f\u006d\u0070\u0074\u0028\'\u8bf7\u8f93\u5165\u6587\u7ae0\u5bc6\u7801\'\u0029\u003b");
+        if (p === 'undefined'){
+          sessionStorage.setItem(location.pathname, 'undefined');
+        }else{
+          if(p !== null){
+            eval("\u0061\u006c\u0065\u0072\u0074\u0028\'\u5bc6\u7801\u9519\u8bef\uff01\'\u0029\u003b");
+          }
+          history.back();
+        }
+      }
+    }
+  })();
+  </script>
   <meta name="description" content="提示：如果您坚信此页面理应存在，请在下方评论区留言，博主将及时处理！">
 <meta property="og:type" content="website">
 <meta property="og:title" content="404！啊哦，不好意思，页面不见了...">
