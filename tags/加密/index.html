@@ -9,7 +9,7 @@
   <meta name="baidu-site-verification" content="k1wy5Amy7s" />
   <meta name="keywords" content="林粤凯, linyk">
   <link rel="dns-prefetch" href="https://linyk.me">
-  <title>new Date解析日期字符串在不同浏览器的差异 | Erick的博客</title>
+  <title>Tag: 加密 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script>
   (function(){
@@ -28,18 +28,16 @@
     }
   })();
   </script>
-  <meta name="description" content="今天，偶然发现一个Chrome对于执行new Date()表达式产生的怪异现象，如下所示：  Chrome F12控制台  123new Date(&quot;2017-03-31&quot;);     //打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)new Date(&quot;2017-3-31&quot;);      //打印： Fri Mar 31 2017 00:00:00">
-<meta name="keywords" content="Javascript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="new Date解析日期字符串在不同浏览器的差异">
-<meta property="og:url" content="https://linyk.me/2017/03/31/chrome-date-bug/index.html">
+  <meta name="description" content="Erick的博客，一个学习、分享和沉淀的个人技术空间，专注web前端技术">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Erick的博客">
+<meta property="og:url" content="https://linyk.me/tags/加密/index.html">
 <meta property="og:site_name" content="Erick的博客">
-<meta property="og:description" content="今天，偶然发现一个Chrome对于执行new Date()表达式产生的怪异现象，如下所示：  Chrome F12控制台  123new Date(&quot;2017-03-31&quot;);     //打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)new Date(&quot;2017-3-31&quot;);      //打印： Fri Mar 31 2017 00:00:00">
+<meta property="og:description" content="Erick的博客，一个学习、分享和沉淀的个人技术空间，专注web前端技术">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-10-30T04:04:30.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="new Date解析日期字符串在不同浏览器的差异">
-<meta name="twitter:description" content="今天，偶然发现一个Chrome对于执行new Date()表达式产生的怪异现象，如下所示：  Chrome F12控制台  123new Date(&quot;2017-03-31&quot;);     //打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)new Date(&quot;2017-3-31&quot;);      //打印： Fri Mar 31 2017 00:00:00">
+<meta name="twitter:title" content="Erick的博客">
+<meta name="twitter:description" content="Erick的博客，一个学习、分享和沉淀的个人技术空间，专注web前端技术">
   
     <link rel="alternative" href="/atom.xml" title="Erick的博客" type="application/atom+xml">
   
@@ -195,207 +193,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-chrome-date-bug" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      new Date解析日期字符串在不同浏览器的差异
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/09/22/sad/" class="archive-article-date">
+  	<time datetime="2017-09-22T00:49:45.000Z" itemprop="datePublished">
+  		<i class="icon-calendar icon"></i>
+  		2017-09-22
+  	</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/09/22/sad/">两人之间（一）</a>
     </h1>
   
 
-        
-        <a href="/2017/03/31/chrome-date-bug/" class="archive-article-date">
-  	<time datetime="2017-03-31T02:42:35.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-03-31
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天，偶然发现一个Chrome对于执行<code>new Date()</code>表达式产生的怪异现象，如下所示：</p>
-<ul>
-<li>Chrome F12控制台</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)</span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Fri Mar 31 2017 00:00:00 GMT+0800 (中国标准时间)</span></div></pre></td></tr></table></figure>
-<p>即在这种情况下，输出的结果差别是<code>08</code>时和<code>00</code>时。而在其他浏览器是这样的：</p>
-<a id="more"></a>
-<ul>
-<li>Firefox控制台</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： 2017-03-31T00:00:00.000Z</span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： 2017-03-31T00:00:00.000Z</span></div><div class="line"></div><div class="line"><span class="comment">//结果一致</span></div></pre></td></tr></table></figure>
-<ul>
-<li>IE控制台模拟：IE 9</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 08:00:00 UTC+0800 2017 </span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Invalid Date</span></div></pre></td></tr></table></figure>
-<ul>
-<li>IE控制台模拟：IE 7/8</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： NaN </span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： NaN</span></div></pre></td></tr></table></figure>
-<p>可以看到，Firefox得到的结果应该是和我们期望的一样，而IE……一如既往的给予我们惊喜。</p>
-<p><strong>总结</strong>：<code>new Date</code>对于日期字符串的解析因浏览器而异，为了保持最大兼容性的统一，建议使用以下格式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(yyyy,mth,dd,hh,mm,ss);  <span class="comment">//精确到秒</span></div><div class="line">        </div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(yyyy,mth,dd);           <span class="comment">//精确到天</span></div></pre></td></tr></table></figure>
-<ul>
-<li><strong>注意：以上的<code>mth</code>值为现实世界月份-1。</strong></li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>如果文章对你有帮助，不妨小小打赏一下！<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://cn.gravatar.com/userimage/109807169/4c06ac663fb5ed174811ef8d7f8fc07a.png?size=200">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://cn.gravatar.com/userimage/109807169/15f1efc943fabe7d4718d34d834ae1b6.png?size=200">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">情绪</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">加密</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://linyk.me/2017/03/31/chrome-date-bug/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/09/22/sad/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          两人之间（一）
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/03/31/babel-usage/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Babel 6.0之babel-cli和babel-core的用法和区别</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
-
-<section id="comments">
-<!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="new Date解析日期字符串在不同浏览器的差异" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cysUy3hml'; 
-var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-</section>
+    
 
 
           </div>
@@ -419,9 +277,9 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		root: "/",
