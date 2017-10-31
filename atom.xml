@@ -5,12 +5,12 @@
   <subtitle>兴趣引领生活，专注WEB前端</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://linyk.me/"/>
+  <link href="//linyk.me/"/>
   <updated>2017-10-30T04:04:41.447Z</updated>
-  <id>https://linyk.me/</id>
+  <id>//linyk.me/</id>
   
   <author>
-    <name>Erick</name>
+    <name>林粤凯</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Javascript呈现星星评分效果的最简单实现</title>
-    <link href="https://linyk.me/2017/10/13/stars-score/"/>
-    <id>https://linyk.me/2017/10/13/stars-score/</id>
+    <link href="//linyk.me/2017/10/13/stars-score/"/>
+    <id>//linyk.me/2017/10/13/stars-score/</id>
     <published>2017-10-13T07:30:28.000Z</published>
     <updated>2017-10-30T04:04:41.447Z</updated>
     
@@ -36,14 +36,14 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://linyk.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="//linyk.me/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>两人之间（一）</title>
-    <link href="https://linyk.me/2017/09/22/sad/"/>
-    <id>https://linyk.me/2017/09/22/sad/</id>
+    <link href="//linyk.me/2017/09/22/sad/"/>
+    <id>//linyk.me/2017/09/22/sad/</id>
     <published>2017-09-22T00:49:45.000Z</published>
     <updated>2017-10-30T04:28:46.342Z</updated>
     
@@ -57,16 +57,16 @@
     </summary>
     
     
-      <category term="情绪" scheme="https://linyk.me/tags/%E6%83%85%E7%BB%AA/"/>
+      <category term="情绪" scheme="//linyk.me/tags/%E6%83%85%E7%BB%AA/"/>
     
-      <category term="加密" scheme="https://linyk.me/tags/%E5%8A%A0%E5%AF%86/"/>
+      <category term="加密" scheme="//linyk.me/tags/%E5%8A%A0%E5%AF%86/"/>
     
   </entry>
   
   <entry>
     <title>new Date解析日期字符串在不同浏览器的差异</title>
-    <link href="https://linyk.me/2017/03/31/chrome-date-bug/"/>
-    <id>https://linyk.me/2017/03/31/chrome-date-bug/</id>
+    <link href="//linyk.me/2017/03/31/chrome-date-bug/"/>
+    <id>//linyk.me/2017/03/31/chrome-date-bug/</id>
     <published>2017-03-31T02:42:35.000Z</published>
     <updated>2017-10-30T04:04:30.632Z</updated>
     
@@ -84,14 +84,14 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://linyk.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="//linyk.me/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>Babel 6.0之babel-cli和babel-core的用法和区别</title>
-    <link href="https://linyk.me/2017/03/31/babel-usage/"/>
-    <id>https://linyk.me/2017/03/31/babel-usage/</id>
+    <link href="//linyk.me/2017/03/31/babel-usage/"/>
+    <id>//linyk.me/2017/03/31/babel-usage/</id>
     <published>2017-03-30T22:12:52.000Z</published>
     <updated>2017-10-30T04:04:23.782Z</updated>
     
@@ -106,14 +106,14 @@
     </summary>
     
     
-      <category term="Babel" scheme="https://linyk.me/tags/Babel/"/>
+      <category term="Babel" scheme="//linyk.me/tags/Babel/"/>
     
   </entry>
   
   <entry>
     <title>React入门：循序渐进学习ES6 + Webpack + React</title>
-    <link href="https://linyk.me/2017/03/29/react-guide/"/>
-    <id>https://linyk.me/2017/03/29/react-guide/</id>
+    <link href="//linyk.me/2017/03/29/react-guide/"/>
+    <id>//linyk.me/2017/03/29/react-guide/</id>
     <published>2017-03-29T01:22:51.000Z</published>
     <updated>2017-10-30T04:04:37.272Z</updated>
     
@@ -130,14 +130,14 @@
     </summary>
     
     
-      <category term="react" scheme="https://linyk.me/tags/react/"/>
+      <category term="react" scheme="//linyk.me/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>使用Hexo，如何在多台电脑上维护和更新github pages博客</title>
-    <link href="https://linyk.me/2017/03/24/hexo-github-pages/"/>
-    <id>https://linyk.me/2017/03/24/hexo-github-pages/</id>
+    <link href="//linyk.me/2017/03/24/hexo-github-pages/"/>
+    <id>//linyk.me/2017/03/24/hexo-github-pages/</id>
     <published>2017-03-23T21:51:40.000Z</published>
     <updated>2017-10-30T04:04:33.985Z</updated>
     
@@ -153,14 +153,14 @@
     </summary>
     
     
-      <category term="hexo" scheme="https://linyk.me/tags/hexo/"/>
+      <category term="hexo" scheme="//linyk.me/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>【转载】JavaScript：彻底理解同步、异步和事件循环(Event Loop)</title>
-    <link href="https://linyk.me/2017/03/23/js-event-loop/"/>
-    <id>https://linyk.me/2017/03/23/js-event-loop/</id>
+    <link href="//linyk.me/2017/03/23/js-event-loop/"/>
+    <id>//linyk.me/2017/03/23/js-event-loop/</id>
     <published>2017-03-23T07:07:07.000Z</published>
     <updated>2017-10-30T04:04:35.597Z</updated>
     
@@ -175,28 +175,29 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://linyk.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="//linyk.me/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>Hello My World</title>
-    <link href="https://linyk.me/2017/03/23/hello-world/"/>
-    <id>https://linyk.me/2017/03/23/hello-world/</id>
+    <link href="//linyk.me/2017/03/23/hello-world/"/>
+    <id>//linyk.me/2017/03/23/hello-world/</id>
     <published>2017-03-23T02:07:07.000Z</published>
-    <updated>2017-10-30T04:04:31.959Z</updated>
+    <updated>2017-10-31T01:29:51.259Z</updated>
     
-    <content type="html"><![CDATA[<p>终于，尘埃落定，我最终决定个人博客域名还是让<code>linyk</code>——我的名字拼音缩写——来承担这个重任！！</p><p>有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。</p><a id="more"></a><p>我感到前所未有的自由~~</p><p>然而，我是个懒人，能坚持更新吗？坚持多久呢？嘛，谁也说不清楚，有灵感就会来这儿划上一笔的！</p><blockquote><p>PS：本博客当前使用的是 <a href="https://github.com/litten" target="_blank" rel="external">litten</a> 提供的 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a> 主题，这个风格我很喜欢，特此感谢！</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/hello_world.jpg" alt="hello-world!"></p><p>终于，尘埃落定，我最终决定个人博客域名还是让<code>linyk</code>——我的名字拼音缩写——来承担这个重任！！</p><p>有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。</p><a id="more"></a><p>我感到前所未有的自由~~</p><p>然而，我是个懒人，能坚持更新吗？坚持多久呢？嘛，谁也说不清楚，有灵感就会来这儿划上一笔的！</p><blockquote><p>PS：本博客当前使用的是 <a href="https://github.com/litten" target="_blank" rel="external">litten</a> 提供的 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a> 主题，这个风格我很喜欢，特此感谢！</p></blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;终于，尘埃落定，我最终决定个人博客域名还是让&lt;code&gt;linyk&lt;/code&gt;——我的名字拼音缩写——来承担这个重任！！&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/hello_world.jpg&quot; alt=&quot;hello-world!&quot;&gt;&lt;/p&gt;
+&lt;p&gt;终于，尘埃落定，我最终决定个人博客域名还是让&lt;code&gt;linyk&lt;/code&gt;——我的名字拼音缩写——来承担这个重任！！&lt;/p&gt;
 &lt;p&gt;有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="随笔" scheme="https://linyk.me/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="//linyk.me/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
