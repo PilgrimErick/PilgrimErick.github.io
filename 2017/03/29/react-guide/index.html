@@ -254,7 +254,7 @@
 <p>一路回车，完成后目录会生成一个<code>package.json</code>文件，用于记录项目依赖等信息，方便项目迁移。</p>
 <p>继续执行以下命令，开始在项目本地安装Babel，并将Babel写入项目依赖（即<code>package.json</code>文件）中：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save-dev babel-cli</div></pre></td></tr></table></figure>
-<p>babel 6除了babel-cli模块之外，还有另一个模块babel-core，如果不清楚可以参见：<a href="http://linyk.me/2017/03/31/babel-usage/">babel-cli和babel-core的用法和区别</a>， 我们这里用babel-cli。</p>
+<p>babel 6除了babel-cli模块之外，还有另一个模块babel-core，如果不清楚可以参见：<a href="http://linyk.me/2017/03/31/babel-usage/" target="_blank" rel="external">babel-cli和babel-core的用法和区别</a>， 我们这里用babel-cli。</p>
 <p>Babel 6官方推荐<strong>本地安装</strong>babel-cli，而不是全局安装，所以我们不能直接在该目录的命令行下使用<code>babel</code>命令，不过可以在<code>package.json</code>中这样：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"script"</span>:&#123;</div><div class="line">        <span class="string">"build"</span>: <span class="string">"babel app.js -o main.js"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
@@ -346,7 +346,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ webpack</div><div class="line">Hash: d64464758f8b8762b8fe</div><div class="line">Version: webpack 1.13.2</div><div class="line">Time: 4640ms</div><div class="line">  Asset    Size  Chunks             Chunk Names</div><div class="line">main.js  998 kB       0  [emitted]  main</div><div class="line">    + 474 hidden modules</div></pre></td></tr></table></figure>
 <p>可以看到项目目录生成一个<code>main.js</code>，用浏览器打开<code>index.html</code>看一下吧：</p>
 <p><img src="/images/webpack_react_demo.png" alt="ES6 + Webpack + React循序渐进Demo"></p>
-<p>现在我们终于把一个简单的React Demo跑起来了，那么就让我们开始正式进入到主题中，开始<a href="http://linyk.me/">react学习之路</a>吧！</p>
+<p>现在我们终于把一个简单的React Demo跑起来了，那么就让我们开始正式进入到主题中，开始<a href="http://linyk.me/" target="_blank" rel="external">react学习之路</a>吧！</p>
 
       
 
@@ -589,15 +589,15 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Babel</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -614,6 +614,10 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">加密</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
