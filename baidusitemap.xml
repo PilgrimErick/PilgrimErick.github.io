@@ -38,25 +38,6 @@
 
     
   <url>
-    <loc>//linyk.me/2017/09/22/sad/</loc>
-    <lastmod>2017-10-30T04:28:46.342Z</lastmod>
-    <data>
-        <display>
-        <title>两人之间（一）</title>
-        <pubTime>2017-09-22T00:49:45.000Z</pubTime>
-        
-        <tag>情绪</tag>
-         
-        <tag>加密</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>//linyk.me/2017/10/13/stars-score/</loc>
     <lastmod>2017-10-30T04:04:41.447Z</lastmod>
     <data>
@@ -65,23 +46,6 @@
         <pubTime>2017-10-13T07:30:28.000Z</pubTime>
         
         <tag>Javascript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//linyk.me/2017/03/29/react-guide/</loc>
-    <lastmod>2017-10-30T04:04:37.272Z</lastmod>
-    <data>
-        <display>
-        <title>React入门：循序渐进学习ES6 + Webpack + React</title>
-        <pubTime>2017-03-29T01:22:51.000Z</pubTime>
-        
-        <tag>react</tag>
          
          
            
@@ -133,23 +97,6 @@
         <pubTime>2017-03-31T02:42:35.000Z</pubTime>
         
         <tag>Javascript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//linyk.me/2017/03/31/babel-usage/</loc>
-    <lastmod>2017-10-30T04:04:23.782Z</lastmod>
-    <data>
-        <display>
-        <title>Babel 6.0之babel-cli和babel-core的用法和区别</title>
-        <pubTime>2017-03-30T22:12:52.000Z</pubTime>
-        
-        <tag>Babel</tag>
          
          
            
