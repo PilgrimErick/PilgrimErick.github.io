@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
-  <title>“薛定谔的猫”简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项 | Erick的博客</title>
+  <title>一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项 | Erick的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script>
   (function(){
@@ -29,15 +29,15 @@
   <meta name="description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“薛定谔的猫”简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
+<meta property="og:title" content="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
 <meta property="og:url" content="//linyk.me/2017/12/20/schrodinger-s-cat-draw-algorithm/index.html">
 <meta property="og:site_name" content="Erick的博客">
 <meta property="og:description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="//linyk.me/images/draw_joke.png">
-<meta property="og:updated_time" content="2017-12-20T03:39:34.870Z">
+<meta property="og:updated_time" content="2017-12-26T06:01:44.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="“薛定谔的猫”简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
+<meta name="twitter:title" content="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
 <meta name="twitter:description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
 <meta name="twitter:image" content="//linyk.me/images/draw_joke.png">
   
@@ -202,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      “薛定谔的猫”简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项
+      一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项
     </h1>
   
 
@@ -238,10 +238,10 @@
 </ul>
 <p>算法实现代码如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> drawNumber = <span class="number">5</span>;                    <span class="comment">//设置默认抽奖个数</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> originList = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>];  <span class="comment">//抽奖面向的用户集合</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"> originList </span>)</span>&#123;</div><div class="line">    <span class="keyword">let</span> randomNumList = [];</div><div class="line">    <span class="keyword">let</span> luckyList = [];</div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>,len=originList.length; i&lt;len; i++)&#123; <span class="comment">//每个数组项生成一个对应的随机数</span></div><div class="line">        randomNumList.push(&#123;</div><div class="line">            originIndex: i,</div><div class="line">            randomNum: <span class="built_in">Math</span>.random()</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    randomNumList.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>)</span>&#123;      <span class="comment">//按随机数大小由大到小排序</span></div><div class="line">        <span class="keyword">return</span> b.randomNum - a.randomNum;   </div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">    <span class="comment">//console.log(randomNumList.slice(0));</span></div><div class="line"></div><div class="line">    randomNumList.length = drawNumber;       <span class="comment">//截取前5个项</span></div><div class="line">    luckyList = randomNumList.map(<span class="function"><span class="keyword">function</span>(<span class="params">relation, i</span>)</span>&#123;<span class="comment">//找到5个随机数项对应的数组项作为抽奖结果</span></div><div class="line">        <span class="keyword">return</span> originList[relation.originIndex];</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> luckyList;</div><div class="line">&#125;</div><div class="line"></div><div class="line">draw( originList );      <span class="comment">//结果：随机的五个项构成的一个数组</span></div></pre></td></tr></table></figure>
-<p>在随机数生成以后，在进行“排序截取”前，此时的状态就类似于“薛定谔”提出的思想实验中那只“猫”的量子叠加态，谁都无法得知最终的结果是怎样的。只有在观察者（程序）进行观察（排序截取）之后，结果才能得知（猫到底是死是活，量子态坍缩成为现实），基本实现了公平的随机性。</p>
+<p>在随机数生成以后，在进行“排序截取”前，谁都无法得知最终的结果是怎样的。只有在程序进行排序截取之后，结果才能得知，基本实现了公平的随机性。</p>
 <p>如果有别的实现“一次性”抽取的算法，欢迎评论交流！</p>
 <blockquote>
-<p>PS：<strong>本文可任意转载，转载请注明</strong>：</p>
+<p>PS：<strong>欢迎转载，转载请注明</strong>：</p>
 <ul>
 <li>本文转自 <a href="http://linyk.me/2017/12/20/schrodinger-s-cat-draw-algorithm/" target="_blank" rel="external">http://linyk.me/2017/12/20/schrodinger-s-cat-draw-algorithm/</a>，作者 <a href="http://linyk.me" target="_blank" rel="external">Erick</a></li>
 </ul>
@@ -381,7 +381,7 @@
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="“薛定谔的猫”简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项" ></div> 
+<div id="SOHUCS" sid="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cysUy3hml'; 
@@ -483,11 +483,11 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
