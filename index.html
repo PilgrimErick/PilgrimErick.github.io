@@ -226,6 +226,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
+
+      
         <p>曾经看到过一篇关于程序员年会抽奖的搞笑漫画<a href="http://mp.weixin.qq.com/s/X0ms_tCvkvQkSXnAXWNJ5g" target="_blank" rel="external">《年会上的程序员们……》</a>，当时只是一笑了之。如今再看，却有了一个疑问：<strong>如何从一个数组中“一次性”随机抽取若干个不重复项？</strong></p>
 <p><img src="/images/draw_joke.jpg" alt="如何从一个数组中“一次性”随机抽取若干个不重复项？"></p>
         
@@ -297,6 +299,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
+
+      
         <p>今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *  score为分值，范围为0-5 </span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">stars</span>(<span class="params">score</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"★★★★★☆☆☆☆☆"</span>.substr(<span class="number">5</span> - score, <span class="number">5</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">stars(<span class="number">3</span>);   <span class="comment">//★★★☆☆</span></div></pre></td></tr></table></figure>
       
@@ -364,6 +368,8 @@ var _hmt = _hmt || [];
       </header>
     
     <div class="article-entry" itemprop="articleBody">
+      
+
       
         <p>今天，偶然发现一个Chrome对于执行<code>new Date()</code>表达式产生的怪异现象，如下所示：</p>
 <ul>
@@ -440,6 +446,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
+
+      
         <p>今天在公司用hexo搭好博客之后，突然有个疑问：我想要回到家继续写文章，那换了电脑之后该怎么更新博客呢？</p>
 <p>思路：<strong>使用git分支</strong>。</p>
 <p>即用个人博客仓库的<code>master</code>分支来保存博客静态页面，新建另一个分支来保存hexo部署环境目录！之后每次博客的更新就在新分支上编辑和发布（deploy），把生成的博客页面推到<code>master</code>分支上。</p>
@@ -513,6 +521,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
+
+      
         <h2 id="一-单线程"><a href="#一-单线程" class="headerlink" title="一. 单线程"></a>一. 单线程</h2><p>我们常说“JavaScript是单线程的”。</p>
 <p>所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它<strong>主线程</strong>。</p>
 <p>但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们<strong>工作线程</strong>。</p>
@@ -584,6 +594,8 @@ var _hmt = _hmt || [];
       </header>
     
     <div class="article-entry" itemprop="articleBody">
+      
+
       
         <p>终于，尘埃落定，我最终决定个人博客域名还是让<code>linyk</code>——我的名字拼音缩写——来承担这个重任！！</p>
 <p>有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。</p>
