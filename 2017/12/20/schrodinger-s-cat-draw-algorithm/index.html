@@ -34,12 +34,12 @@
 <meta property="og:site_name" content="Erick的博客">
 <meta property="og:description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="//linyk.me/images/draw_joke.png">
-<meta property="og:updated_time" content="2017-12-26T08:04:16.998Z">
+<meta property="og:image" content="//linyk.me/images/draw_joke.jpg">
+<meta property="og:updated_time" content="2017-12-26T08:18:47.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
 <meta name="twitter:description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
-<meta name="twitter:image" content="//linyk.me/images/draw_joke.png">
+<meta name="twitter:image" content="//linyk.me/images/draw_joke.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Erick的博客" type="application/atom+xml">
   
@@ -229,7 +229,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>曾经看到过一篇关于程序员年会抽奖的搞笑漫画<a href="http://mp.weixin.qq.com/s/X0ms_tCvkvQkSXnAXWNJ5g" target="_blank" rel="external">《年会上的程序员们……》</a>，当时只是一笑了之。如今再看，却有了一个疑问：<strong>如何从一个数组中“一次性”随机抽取若干个不重复项？</strong></p>
-<p><img src="/images/draw_joke.png" alt="如何从一个数组中“一次性”随机抽取若干个不重复项？"></p>
+<p><img src="/images/draw_joke.jpg" alt="如何从一个数组中“一次性”随机抽取若干个不重复项？"></p>
 <a id="more"></a>
 <h3 id="一、“连续随机抽取出若干项”的不公平现象"><a href="#一、“连续随机抽取出若干项”的不公平现象" class="headerlink" title="一、“连续随机抽取出若干项”的不公平现象"></a>一、“连续随机抽取出若干项”的不公平现象</h3><p>本文标题之所以强调“一次性”，是因为“连续取”存在一个“不公平现象”。看一段js实现“从一个数组中连续随机抽取5个不重复项”的功能的代码：（<em>本文中提到的随机都是指伪随机，不涉及真随机</em>）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> drawNumber = <span class="number">5</span>;                    <span class="comment">//设置默认抽奖个数</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> originList = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>];  <span class="comment">//抽奖面向的用户集合</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"> originList </span>)</span>&#123;</div><div class="line">    <span class="keyword">let</span> luckyList = [];</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;drawNumber; i++)&#123;</div><div class="line">        <span class="keyword">let</span> randomIndex = <span class="built_in">Math</span>.floor( <span class="built_in">Math</span>.random() * originList.length );  <span class="comment">//生成随机索引</span></div><div class="line">        luckyList.push( originList.splice(randomIndex, <span class="number">1</span>)[<span class="number">0</span>] );             <span class="comment">//抽奖</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> luckyList;</div><div class="line">&#125;</div><div class="line"></div><div class="line">draw( originList );      <span class="comment">//结果：随机的五个项构成的一个数组</span></div></pre></td></tr></table></figure>
