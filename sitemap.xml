@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//linyk.me/2017/03/23/js-event-loop/</loc>
+    
+    <lastmod>2017-12-26T07:25:11.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//linyk.me/2017/03/23/hello-world/</loc>
+    
+    <lastmod>2017-12-26T07:24:48.594Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//linyk.me/2017/03/24/hexo-github-pages/</loc>
     
     <lastmod>2017-12-26T06:01:52.298Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>//linyk.me/2017/03/23/hello-world/</loc>
-    
-    <lastmod>2017-12-25T08:50:38.344Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//linyk.me/2017/10/13/stars-score/</loc>
     
     <lastmod>2017-10-30T04:04:41.447Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//linyk.me/2017/03/23/js-event-loop/</loc>
-    
-    <lastmod>2017-10-30T04:04:35.597Z</lastmod>
     
   </url>
   
