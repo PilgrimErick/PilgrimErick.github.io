@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
   <title>使用Hexo，如何在多台电脑上维护和更新github pages博客 | Hash的博客</title>
@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
 	})();
 	</script>
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -205,7 +205,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-github-pages" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hexo-github-pages" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -240,7 +240,7 @@ var _hmt = _hmt || [];
 <p>如果这一步还未完成，请自行搜索如何使用hexo搭建Github Pages个人博客，网上教程一大堆，不再赘述。</p>
 <h2 id="二、对username-github-io仓库新建分支，并克隆"><a href="#二、对username-github-io仓库新建分支，并克隆" class="headerlink" title="二、对username.github.io仓库新建分支，并克隆"></a>二、对username.github.io仓库新建分支，并克隆</h2><p>在Github的<code><em>username</em>.github.io</code>仓库上新建一个<code>xxx</code>分支，并切换到该分支，并在该仓库-&gt;Settings-&gt;Branches-&gt;Default branch中将默认分支设为<code>xxx</code>，save保存；然后将该仓库克隆到本地，进入该<code><em>username</em>.github.io</code>文件目录。</p>
 <p>完成上面步骤后，在当前目录使用Git Bash执行<code>git branch</code>命令查看当前所在分支，应为新建的分支<code>xxx</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git branch</div><div class="line">*xxx</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">*xxx</span><br></pre></td></tr></table></figure>
 <h2 id="三、将本地博客的部署文件拷贝进username-github-io文件目录"><a href="#三、将本地博客的部署文件拷贝进username-github-io文件目录" class="headerlink" title="三、将本地博客的部署文件拷贝进username.github.io文件目录"></a>三、将本地博客的部署文件拷贝进username.github.io文件目录</h2><p>如题，先将本地博客的部署文件全部拷贝进<code><em>username</em>.github.io</code>文件目录。</p>
 <p>接下来，将拷贝进来的博客hexo部署环境提交到<code>xxx</code>分支，提交之前需注意：</p>
 <blockquote>
@@ -276,7 +276,7 @@ var _hmt = _hmt || [];
         <blockquote>
           <p><strong>本文欢迎转载，转载须注明</strong>：</p>
           <ul>
-            <li>本文转自 <a href="http://linyk.me/2017/03/24/hexo-github-pages/" target="_blank" rel="external">http://linyk.me/2017/03/24/hexo-github-pages/</a>，作者 <a href="http://linyk.me" target="_blank" rel="external">Erick</a></li>
+            <li>本文转自 <a href="http://linyk.me/2017/03/24/hexo-github-pages/" target="_blank" rel="external">http://linyk.me/2017/03/24/hexo-github-pages/</a>，作者 <a href="http://linyk.me" target="_blank" rel="external">Hash</a></li>
           </ul>
         </blockquote>
       
@@ -423,13 +423,13 @@ var _hmt = _hmt || [];
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="使用Hexo，如何在多台电脑上维护和更新github pages博客" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cysUy3hml'; 
-var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
+<div id="SOHUCS" sid="使用Hexo，如何在多台电脑上维护和更新github pages博客"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cysUy3hml';
+var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 </section>
 
@@ -444,7 +444,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     		&copy; 2018 Hash
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a> Theme Based on <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, Custom Modified by Erick.
+      		<a href="http://hexo.io/" target="_blank">Hexo</a> Theme Based on <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, Custom Modified by Hash.
       	</div>
     </div>
   </div>
@@ -521,19 +521,19 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
@@ -541,7 +541,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             2、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -600,7 +600,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">林粤凯&lt;br/&gt;一枚两年在职前端，坐标深圳&lt;br/&gt;&lt;br/&gt;崇尚自由，思想飘逸&lt;br/&gt;&lt;br/&gt;轻度完美主义患者</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">林粤凯&lt;br/&gt;一枚三年在职前端，坐标深圳&lt;br/&gt;&lt;br/&gt;崇尚自由，思想飘逸&lt;br/&gt;&lt;br/&gt;轻度完美主义患者</div>
   	  	
     	</section>
     

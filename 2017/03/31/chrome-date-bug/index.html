@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
   <title>new Date解析日期字符串在不同浏览器的差异 | Hash的博客</title>
@@ -80,7 +80,7 @@ var _hmt = _hmt || [];
 	})();
 	</script>
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -203,7 +203,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-chrome-date-bug" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-chrome-date-bug" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -232,24 +232,24 @@ var _hmt = _hmt || [];
 <ul>
 <li>Chrome F12控制台</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)</span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Fri Mar 31 2017 00:00:00 GMT+0800 (中国标准时间)</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Fri Mar 31 2017 00:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
 <p>即在这种情况下，输出的结果差别是<code>08</code>时和<code>00</code>时。而在其他浏览器是这样的：</p>
 <a id="more"></a>
 <ul>
 <li>Firefox控制台</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： 2017-03-31T00:00:00.000Z</span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： 2017-03-31T00:00:00.000Z</span></div><div class="line"></div><div class="line"><span class="comment">//结果一致</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： 2017-03-31T00:00:00.000Z</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： 2017-03-31T00:00:00.000Z</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//结果一致</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>IE控制台模拟：IE 9</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 08:00:00 UTC+0800 2017 </span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Invalid Date</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 08:00:00 UTC+0800 2017 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Invalid Date</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>IE控制台模拟：IE 7/8</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： NaN </span></div><div class="line"></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： NaN</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： NaN </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： NaN</span></span><br></pre></td></tr></table></figure>
 <p>可以看到，Firefox得到的结果应该是和我们期望的一样，而IE……一如既往的给予我们惊喜。</p>
 <p><strong>总结</strong>：<code>new Date</code>对于日期字符串的解析因浏览器而异，为了保持最大兼容性的统一，建议使用以下格式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(yyyy,mth,dd,hh,mm,ss);  <span class="comment">//精确到秒</span></div><div class="line">        </div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(yyyy,mth,dd);           <span class="comment">//精确到天</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(yyyy,mth,dd,hh,mm,ss);  <span class="comment">//精确到秒</span></span><br><span class="line">        </span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(yyyy,mth,dd);           <span class="comment">//精确到天</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>注意：以上的<code>mth</code>值为现实世界月份-1。</strong></li>
 </ul>
@@ -400,13 +400,13 @@ var _hmt = _hmt || [];
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="new Date解析日期字符串在不同浏览器的差异" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cysUy3hml'; 
-var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
+<div id="SOHUCS" sid="new Date解析日期字符串在不同浏览器的差异"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cysUy3hml';
+var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 </section>
 
@@ -421,7 +421,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     		&copy; 2018 Hash
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a> Theme Based on <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, Custom Modified by Erick.
+      		<a href="http://hexo.io/" target="_blank">Hexo</a> Theme Based on <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, Custom Modified by Hash.
       	</div>
     </div>
   </div>
@@ -498,19 +498,19 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
@@ -518,7 +518,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             2、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -577,7 +577,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">林粤凯&lt;br/&gt;一枚两年在职前端，坐标深圳&lt;br/&gt;&lt;br/&gt;崇尚自由，思想飘逸&lt;br/&gt;&lt;br/&gt;轻度完美主义患者</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">林粤凯&lt;br/&gt;一枚三年在职前端，坐标深圳&lt;br/&gt;&lt;br/&gt;崇尚自由，思想飘逸&lt;br/&gt;&lt;br/&gt;轻度完美主义患者</div>
   	  	
     	</section>
     

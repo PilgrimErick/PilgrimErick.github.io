@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
   <title>转载：彻底理解JavaScript的同步、异步和事件循环(Event Loop) | Hash的博客</title>
@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
 	})();
 	</script>
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -205,7 +205,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js-event-loop" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js-event-loop" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -234,17 +234,17 @@ var _hmt = _hmt || [];
 <p>所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它<strong>主线程</strong>。</p>
 <p>但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们<strong>工作线程</strong>。</p>
 <a id="more"></a>
-<h2 id="二-同步和异步"><a href="#二-同步和异步" class="headerlink" title="二. 同步和异步"></a>二. 同步和异步</h2><p>假设存在一个函数A：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A(args...);</div></pre></td></tr></table></figure></p>
+<h2 id="二-同步和异步"><a href="#二-同步和异步" class="headerlink" title="二. 同步和异步"></a>二. 同步和异步</h2><p>假设存在一个函数A：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A(args...);</span><br></pre></td></tr></table></figure></p>
 <p><strong>同步</strong>：如果在函数A返回的时候，调用者就能够得到预期结果(即拿到了预期的返回值或者看到了预期的效果)，那么这个函数就是同步的。</p>
 <p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Hi'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hi'</span>);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>第一个函数返回时，就拿到了预期的返回值：2的平方根。</li>
 <li>第二个函数返回时，就看到了预期的效果：在控制台打印了一个字符串。</li>
 </ul>
 <p>所以这两个函数都是同步的。</p>
 <p><strong>异步</strong>：如果在函数A返回的时候，调用者还不能够得到预期结果，而是需要在将来通过一定的手段得到，那么这个函数就是异步的。</p>
-<p>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fs.readFile(<span class="string">'foo.txt'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(<span class="string">'foo.txt'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>在上面的代码中，我们希望通过<code>fs.readFile</code>函数读取文件foo.txt中的内容，并打印出来。<br>但是在<code>fs.readFile</code>函数返回时，我们期望的结果并不会发生，而是要等到文件全部读取完成之后。如果文件很大的话可能要很长时间。</p>
 <p>下面以AJAX请求为例，来看一下同步和异步的区别：</p>
 <ul>
@@ -279,7 +279,7 @@ var _hmt = _hmt || [];
 <p>主线程发起一个异步请求，相应的工作线程接收请求并告知主线程已收到(异步函数返回)；主线程可以继续执行后面的代码，同时工作线程执行异步任务；工作线程完成工作后，通知主线程；主线程收到通知后，执行一定的动作(调用回调函数)。</p>
 </blockquote>
 <p>异步函数通常具有以下的形式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A(args..., callbackFn)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A(args..., callbackFn)</span><br></pre></td></tr></table></figure>
 <p>它可以叫做异步过程的发起函数，或者叫做异步任务注册函数。<code>args</code>是这个函数需要的参数。<code>callbackFn</code>也是这个函数的参数，但是它比较特殊所以单独列出来。</p>
 <p>所以，从主线程的角度看，一个异步过程包括下面两个要素：</p>
 <blockquote>
@@ -288,10 +288,10 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>它们都是在主线程上调用的，其中注册函数用来发起异步过程，回调函数用来处理结果。</p>
 <p>举个具体的例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setTimeout(fn, <span class="number">1000</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(fn, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
 <p>其中的<code>setTimeout</code>就是异步过程的发起函数，<code>fn</code>是回调函数。</p>
 <p>注意：前面说的形式<code>A(args..., callbackFn)</code>只是一种抽象的表示，并不代表回调函数一定要作为发起函数的参数，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.onreadystatechange = xxx; <span class="comment">// 添加回调函数</span></div><div class="line">xhr.open(<span class="string">'GET'</span>, url);</div><div class="line">xhr.send(); <span class="comment">// 发起函数</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.onreadystatechange = xxx; <span class="comment">// 添加回调函数</span></span><br><span class="line">xhr.open(<span class="string">'GET'</span>, url);</span><br><span class="line">xhr.send(); <span class="comment">// 发起函数</span></span><br></pre></td></tr></table></figure>
 <p>发起函数和回调函数就是分离的。</p>
 <h2 id="四-消息队列和事件循环"><a href="#四-消息队列和事件循环" class="headerlink" title="四. 消息队列和事件循环"></a>四. 消息队列和事件循环</h2><p>上文讲到，异步过程中，工作线程在异步操作完成后需要通知主线程。那么这个通知机制是怎样实现的呢？答案是利用消息队列和事件循环。</p>
 <p>用一句话概括：</p>
@@ -304,12 +304,12 @@ var _hmt = _hmt || [];
 </ul>
 <p>实际上，主线程只会做一件事情，就是从消息队列里面取消息、执行消息，再取消息、再执行。当消息队列为空时，就会等待直到消息队列变成非空。而且主线程只有在将当前的消息执行完成后，才会去取下一个消息。这种机制就叫做事件循环机制，取一个消息并执行的过程叫做一次循环。</p>
 <p>事件循环用代码表示大概是这样的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">var</span> message = queue.get();</div><div class="line">    execute(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> message = queue.get();</span><br><span class="line">    execute(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>那么，消息队列中放的消息具体是什么东西？消息的具体结构当然跟具体的实现有关，但是为了简单起见，我们可以认为：</p>
 <p>消息就是注册异步任务时添加的回调函数。<br>再次以异步AJAX为例，假设存在如下的代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(<span class="string">'http://segmentfault.com'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">resp</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'我是响应：'</span>, resp);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 其他代码</span></div><div class="line">...</div><div class="line">...</div><div class="line">...</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(<span class="string">'http://segmentfault.com'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">resp</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'我是响应：'</span>, resp);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 其他代码</span></span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>主线程在发起AJAX请求后，会继续执行其他代码。AJAX线程负责请求segmentfault.com，拿到响应后，它会把响应封装成一个JavaScript对象，然后构造一条消息：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 消息队列中的消息就长这个样子</span></div><div class="line"><span class="keyword">var</span> message = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    callbackFn(response);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 消息队列中的消息就长这个样子</span></span><br><span class="line"><span class="keyword">var</span> message = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    callbackFn(response);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其中的<code>callbackFn</code>就是前面代码中得到成功响应时的回调函数。</p>
 <p>主线程在执行完当前循环中的所有代码后，就会到消息队列取出这条消息(也就是<code>message</code>函数)，并执行它。到此为止，就完成了工作线程对主线程的通知，回调函数也就得到了执行。如果一开始主线程就没有提供回调函数，AJAX线程在收到HTTP响应后，也就没必要通知主线程，从而也没必要往消息队列放消息。</p>
 <p>用图表示这个过程就是：</p>
@@ -324,12 +324,12 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>上文中一直没有提到一类很重要的异步过程：<strong>DOM事件</strong>。</p>
 <p>举例来说：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElement(<span class="string">'#btn'</span>);</div><div class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElement(<span class="string">'#btn'</span>);</span><br><span class="line">button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>从事件的角度来看，上述代码表示：在按钮上添加了一个鼠标单击事件的事件监听器；当用户点击按钮时，鼠标单击事件触发，事件监听器函数被调用。</p>
 <p>从异步过程的角度看，<code>addEventListener</code>函数就是异步过程的发起函数，事件监听器函数就是异步过程的回调函数。事件触发时，表示异步任务完成，会将事件监听器函数封装成一条消息放到消息队列中，等待主线程执行。</p>
 <p><strong>事件</strong>的概念实际上并不是必须的，事件机制实际上就是异步过程的通知机制。我觉得它的存在是为了编程接口对开发者更友好。</p>
 <p>另一方面，所有的异步过程也都可以用事件来描述。例如：<code>setTimeout</code>可以看成对应一个时间到了！的事件。前文的<code>setTimeout(fn, 1000);</code>可以看成：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">timer.addEventListener(<span class="string">'timeout'</span>, <span class="number">1000</span>, fn);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timer.addEventListener(<span class="string">'timeout'</span>, <span class="number">1000</span>, fn);</span><br></pre></td></tr></table></figure>
 <h2 id="六-生产者与消费者"><a href="#六-生产者与消费者" class="headerlink" title="六. 生产者与消费者"></a>六. 生产者与消费者</h2><p>从生产者与消费者的角度看，异步过程是这样的：</p>
 <blockquote>
 <p>工作线程是生产者，主线程是消费者(只有一个消费者)。工作线程执行异步任务，执行完成后把对应的回调函数封装成一条消息放到消息队列中；主线程不断地从消息队列中取消息并执行，当消息队列空时主线程阻塞，直到消息队列再次非空。</p>
@@ -338,7 +338,7 @@ var _hmt = _hmt || [];
 <p>这就是同步和异步的区别。同步可以保证顺序一致，但是容易导致阻塞；异步可以解决阻塞问题，但是会改变顺序性。改变顺序性其实也没有什么大不了的，只不过让程序变得稍微难理解了一些 :)</p>
 <p>PS：ECMAScript 262规范中，并没有对异步、事件队列等概念及其实现的描述。这些都是具体的JavaScript运行时环境使用的机制。本文重点是描述异步过程的原理，为了便于理解做了很多简化。所以文中的某些术语的使用可能是不准确的，具体细节也未必是正确的，例如消息队列中消息的结构。请读者注意。</p>
 <blockquote>
-<p>PS:本文转载自 <a href="https://segmentfault.com/a/1190000004322358" target="_blank" rel="external">https://segmentfault.com/a/1190000004322358</a></p>
+<p>PS:本文转载自 <a href="https://segmentfault.com/a/1190000004322358" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004322358</a></p>
 </blockquote>
 
       
@@ -456,13 +456,13 @@ var _hmt = _hmt || [];
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="转载：彻底理解JavaScript的同步、异步和事件循环(Event Loop)" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cysUy3hml'; 
-var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
+<div id="SOHUCS" sid="转载：彻底理解JavaScript的同步、异步和事件循环(Event Loop)"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cysUy3hml';
+var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 </section>
 
@@ -477,7 +477,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     		&copy; 2018 Hash
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a> Theme Based on <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, Custom Modified by Erick.
+      		<a href="http://hexo.io/" target="_blank">Hexo</a> Theme Based on <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, Custom Modified by Hash.
       	</div>
     </div>
   </div>
@@ -554,19 +554,19 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
@@ -574,7 +574,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             2、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -633,7 +633,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">林粤凯&lt;br/&gt;一枚两年在职前端，坐标深圳&lt;br/&gt;&lt;br/&gt;崇尚自由，思想飘逸&lt;br/&gt;&lt;br/&gt;轻度完美主义患者</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">林粤凯&lt;br/&gt;一枚三年在职前端，坐标深圳&lt;br/&gt;&lt;br/&gt;崇尚自由，思想飘逸&lt;br/&gt;&lt;br/&gt;轻度完美主义患者</div>
   	  	
     	</section>
     
