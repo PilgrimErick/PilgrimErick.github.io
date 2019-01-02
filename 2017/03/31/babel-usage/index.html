@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
-  <title>Archives | Hash的博客</title>
+  <title>Babel 6.0之babel-cli和babel-core的用法和区别 | Hash的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script>
   (function(){
@@ -26,16 +26,17 @@
     }
   })();
   </script>
-  <meta name="description" content="林粤凯，广东工业大学12级，坐标深圳；此为本人学习、分享和沉淀的个人技术博客，主要涉及web前端，偶尔记叙一些生活情绪小事，分享喜怒哀乐。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hash的博客">
-<meta property="og:url" content="//linyk.me/archives/index.html">
+  <meta name="description" content="在Babel 6以前，Babel是一个专注且单一的Javascript转换器，然而Babel团队的志向不仅于此，更想把Babel打造成一个平台，由各个不同的功能模块和可插拔插件组成，用于创建下一代JavaScript工具集。 于是Babel 6发布了。 Babel 6本身不具有转换ES6代码的功能，也不再默认内嵌支持JSX语法，这一切都需要通过安装对应的转换器插件来实现。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Babel 6.0之babel-cli和babel-core的用法和区别">
+<meta property="og:url" content="//linyk.me/2017/03/31/babel-usage/index.html">
 <meta property="og:site_name" content="Hash的博客">
-<meta property="og:description" content="林粤凯，广东工业大学12级，坐标深圳；此为本人学习、分享和沉淀的个人技术博客，主要涉及web前端，偶尔记叙一些生活情绪小事，分享喜怒哀乐。">
+<meta property="og:description" content="在Babel 6以前，Babel是一个专注且单一的Javascript转换器，然而Babel团队的志向不仅于此，更想把Babel打造成一个平台，由各个不同的功能模块和可插拔插件组成，用于创建下一代JavaScript工具集。 于是Babel 6发布了。 Babel 6本身不具有转换ES6代码的功能，也不再默认内嵌支持JSX语法，这一切都需要通过安装对应的转换器插件来实现。">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-12-21T06:31:02.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hash的博客">
-<meta name="twitter:description" content="林粤凯，广东工业大学12级，坐标深圳；此为本人学习、分享和沉淀的个人技术博客，主要涉及web前端，偶尔记叙一些生活情绪小事，分享喜怒哀乐。">
+<meta name="twitter:title" content="Babel 6.0之babel-cli和babel-core的用法和区别">
+<meta name="twitter:description" content="在Babel 6以前，Babel是一个专注且单一的Javascript转换器，然而Babel团队的志向不仅于此，更想把Babel打造成一个平台，由各个不同的功能模块和可插拔插件组成，用于创建下一代JavaScript工具集。 于是Babel 6发布了。 Babel 6本身不具有转换ES6代码的功能，也不再默认内嵌支持JSX语法，这一切都需要通过安装对应的转换器插件来实现。">
   
     <link rel="alternative" href="/atom.xml" title="Hash的博客" type="application/atom+xml">
   
@@ -201,298 +202,159 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-babel-usage" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/20/schrodinger-s-cat-draw-algorithm/" class="archive-article-date">
-  	<time datetime="2017-12-20T00:57:19.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		12月20日
-  	</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/20/schrodinger-s-cat-draw-algorithm/">一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项</a>
+    <h1 class="article-title" itemprop="name">
+      Babel 6.0之babel-cli和babel-core的用法和区别
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/13/stars-score/" class="archive-article-date">
-  	<time datetime="2017-10-13T07:30:28.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		10月13日
-  	</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/13/stars-score/">Javascript呈现星星评分效果的最简单实现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/31/chrome-date-bug/" class="archive-article-date">
-  	<time datetime="2017-03-31T02:42:35.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		03月31日
-  	</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/31/chrome-date-bug/">new Date解析日期字符串在不同浏览器的差异</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/31/babel-usage/" class="archive-article-date">
+        
+        <a href="/2017/03/31/babel-usage/" class="archive-article-date">
   	<time datetime="2017-03-30T22:12:52.000Z" itemprop="datePublished">
   		<i class="icon-calendar icon"></i>
-  		03月31日
+  		2017-03-31
   	</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/31/babel-usage/">Babel 6.0之babel-cli和babel-core的用法和区别</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
+        <p>在Babel 6以前，Babel是一个专注且单一的Javascript转换器，然而Babel团队的志向不仅于此，更想把Babel打造成一个平台，由各个不同的功能模块和可插拔插件组成，用于创建下一代JavaScript工具集。</p>
+<p>于是Babel 6发布了。</p>
+<p>Babel 6本身不具有转换ES6代码的功能，也不再默认内嵌支持JSX语法，这一切都需要通过安装对应的转换器插件来实现。</p>
+<a id="more"></a>
+<p>在此之前，Babel囊括了整个编译器、所有的转换器以及一个CLI工具， 虽然方便使用，这么做的缺点就是它会导致很多不必要的下载。现在，Bable不再是一个整体包了，它分为了两个单独的包，<code>babel-cli</code>和<code>babel-core</code>。此外还有一些插件预设，如<code>babel-preset-es2015</code>、<code>babel-preset-react</code>等。</p>
+<ul>
+<li><p>如果你想要在命令行使用Babel，你可以安装<code>babel-cli</code></p>
+</li>
+<li><p>如果你需要在一个Node项目中使用Babel，你可以使用<code>babel-core</code></p>
+</li>
+</ul>
+<blockquote>
+<p>参考：<a href="http://www.csdn.net/article/2015-11-17/2826233" target="_blank" rel="noopener">走进Babel 6.0 全新特性解析</a></p>
+</blockquote>
 
+      
+
+      
+
+      
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://linyk.me/2017/03/31/babel-usage/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/24/hexo-github-pages/" class="archive-article-date">
-  	<time datetime="2017-03-23T21:51:40.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		03月24日
-  	</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/24/hexo-github-pages/">使用Hexo，如何在多台电脑上维护和更新github pages博客</a>
-    </h1>
+    <a href="/2017/03/31/chrome-date-bug/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          new Date解析日期字符串在不同浏览器的差异
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/24/hexo-github-pages/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Hexo，如何在多台电脑上维护和更新github pages博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/js-event-loop/" class="archive-article-date">
-  	<time datetime="2017-03-23T07:07:07.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		03月23日
-  	</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/js-event-loop/">转载：彻底理解JavaScript的同步、异步和事件循环(Event Loop)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-23T02:07:07.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		03月23日
-  	</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/hello-world/">Hello My World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+<section id="comments">
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="Babel 6.0之babel-cli和babel-core的用法和区别"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cysUy3hml';
+var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</section>
 
 
           </div>
@@ -516,8 +378,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
