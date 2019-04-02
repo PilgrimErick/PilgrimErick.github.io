@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//linyk.me/"/>
-  <updated>2018-12-27T09:00:17.601Z</updated>
+  <updated>2019-04-02T06:02:13.428Z</updated>
   <id>//linyk.me/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>排序算法：Javascript实现冒泡排序</title>
+    <link href="//linyk.me/2018/03/03/bubble-sort/"/>
+    <id>//linyk.me/2018/03/03/bubble-sort/</id>
+    <published>2018-03-03T12:05:38.000Z</published>
+    <updated>2019-04-02T06:02:13.428Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、冒泡原理"><a href="#一、冒泡原理" class="headerlink" title="一、冒泡原理"></a>一、冒泡原理</h3><p>按从小到大排列顺序的实现来举例，冒泡的过程是指：</p><p><strong>从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）；</strong></p><p>以上为一次<strong>冒泡过程</strong>，得到了一个最大值，然后继续开始第二次<strong>冒泡过程</strong>，这时只需要在排除最后一个数（已排序成功的最大值）的子数列中进行冒泡，同理将第一个数冒泡至该子数列底部。</p><a id="more"></a><p>……</p><p>重复上述冒泡循环，直到倒数第二个数冒泡完成（倒数第二个数排序完成，则剩下的最后一个数顺序也就确定了），假设数列一共有n个数，则需要进行n-1次循环的<strong>冒泡过程</strong>。</p><p>每次<strong>冒泡过程</strong>的具体逻辑都是一致的，也是一个循环，即随着当前（子）数列索引<code>j</code>（假设从0开始）的递增，循环判断相邻的两项大小（进行冒泡），直到当前索引<code>j</code>等于当前（子）数列个数减1（注意“当前”的冒泡数列的长度是递减的）。</p><h3 id="二、算法实现"><a href="#二、算法实现" class="headerlink" title="二、算法实现"></a>二、算法实现</h3><p>根据以上逻辑，我们可以写出以下的代码实现（<code>i</code>值循环递减的写法）：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=len<span class="number">-1</span>; i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            <span class="comment">// 由小到大用 &gt;， 由大到小就是 &lt; </span></span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">var</span> tmp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bubbleSort(arr);    <span class="comment">// [0, 1, 2, 3, 5, 5, 7, 8, 9]</span></span><br></pre></td></tr></table></figure><p>还有另外一种写法，也放出来供对比一下（<code>i</code>值循环递增的写法）：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;len<span class="number">-1</span>;i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;len<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line">            <span class="comment">// 由小到大用 &gt;， 由大到小就是 &lt; </span></span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">var</span> tmp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bubbleSort(arr);    <span class="comment">// [0, 1, 2, 3, 5, 5, 7, 8, 9]</span></span><br></pre></td></tr></table></figure><p>两种方式都可以，看各人喜好吧 :p</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、冒泡原理&quot;&gt;&lt;a href=&quot;#一、冒泡原理&quot; class=&quot;headerlink&quot; title=&quot;一、冒泡原理&quot;&gt;&lt;/a&gt;一、冒泡原理&lt;/h3&gt;&lt;p&gt;按从小到大排列顺序的实现来举例，冒泡的过程是指：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）；&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以上为一次&lt;strong&gt;冒泡过程&lt;/strong&gt;，得到了一个最大值，然后继续开始第二次&lt;strong&gt;冒泡过程&lt;/strong&gt;，这时只需要在排除最后一个数（已排序成功的最大值）的子数列中进行冒泡，同理将第一个数冒泡至该子数列底部。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="排序算法" scheme="//linyk.me/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="冒泡排序" scheme="//linyk.me/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项</title>

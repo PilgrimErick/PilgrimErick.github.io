@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
-  <title>Hash的博客</title>
+  <title>排序算法：Javascript实现冒泡排序 | Hash的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script>
   (function(){
@@ -26,16 +26,18 @@
     }
   })();
   </script>
-  <meta name="description" content="林粤凯，广东工业大学12级，坐标深圳；此为本人学习、分享和沉淀的个人技术博客，主要涉及web前端，偶尔记叙一些生活情绪小事，分享喜怒哀乐。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hash的博客">
-<meta property="og:url" content="//linyk.me/index.html">
+  <meta name="description" content="一、冒泡原理按从小到大排列顺序的实现来举例，冒泡的过程是指： 从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）； 以上为一次冒泡过程，得到了一个最大值，然后继续开始第二次">
+<meta name="keywords" content="排序算法,冒泡排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序算法：Javascript实现冒泡排序">
+<meta property="og:url" content="//linyk.me/2018/03/03/bubble-sort/index.html">
 <meta property="og:site_name" content="Hash的博客">
-<meta property="og:description" content="林粤凯，广东工业大学12级，坐标深圳；此为本人学习、分享和沉淀的个人技术博客，主要涉及web前端，偶尔记叙一些生活情绪小事，分享喜怒哀乐。">
+<meta property="og:description" content="一、冒泡原理按从小到大排列顺序的实现来举例，冒泡的过程是指： 从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）； 以上为一次冒泡过程，得到了一个最大值，然后继续开始第二次">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-04-02T06:02:13.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hash的博客">
-<meta name="twitter:description" content="林粤凯，广东工业大学12级，坐标深圳；此为本人学习、分享和沉淀的个人技术博客，主要涉及web前端，偶尔记叙一些生活情绪小事，分享喜怒哀乐。">
+<meta name="twitter:title" content="排序算法：Javascript实现冒泡排序">
+<meta name="twitter:description" content="一、冒泡原理按从小到大排列顺序的实现来举例，冒泡的过程是指： 从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）； 以上为一次冒泡过程，得到了一个最大值，然后继续开始第二次">
   
     <link rel="alternative" href="/atom.xml" title="Hash的博客" type="application/atom+xml">
   
@@ -201,16 +203,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-bubble-sort" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-bubble-sort" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/03/bubble-sort/">排序算法：Javascript实现冒泡排序</a>
+    <h1 class="article-title" itemprop="name">
+      排序算法：Javascript实现冒泡排序
     </h1>
   
 
@@ -231,13 +231,51 @@ var _hmt = _hmt || [];
         <h3 id="一、冒泡原理"><a href="#一、冒泡原理" class="headerlink" title="一、冒泡原理"></a>一、冒泡原理</h3><p>按从小到大排列顺序的实现来举例，冒泡的过程是指：</p>
 <p><strong>从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）；</strong></p>
 <p>以上为一次<strong>冒泡过程</strong>，得到了一个最大值，然后继续开始第二次<strong>冒泡过程</strong>，这时只需要在排除最后一个数（已排序成功的最大值）的子数列中进行冒泡，同理将第一个数冒泡至该子数列底部。</p>
-        
-          <a class="article-more-a" href="/2018/03/03/bubble-sort/#more">more >></a>
-        
-      
+<a id="more"></a>
+<p>……</p>
+<p>重复上述冒泡循环，直到倒数第二个数冒泡完成（倒数第二个数排序完成，则剩下的最后一个数顺序也就确定了），假设数列一共有n个数，则需要进行n-1次循环的<strong>冒泡过程</strong>。</p>
+<p>每次<strong>冒泡过程</strong>的具体逻辑都是一致的，也是一个循环，即随着当前（子）数列索引<code>j</code>（假设从0开始）的递增，循环判断相邻的两项大小（进行冒泡），直到当前索引<code>j</code>等于当前（子）数列个数减1（注意“当前”的冒泡数列的长度是递减的）。</p>
+<h3 id="二、算法实现"><a href="#二、算法实现" class="headerlink" title="二、算法实现"></a>二、算法实现</h3><p>根据以上逻辑，我们可以写出以下的代码实现（<code>i</code>值循环递减的写法）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=len<span class="number">-1</span>; i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            <span class="comment">// 由小到大用 &gt;， 由大到小就是 &lt; </span></span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">var</span> tmp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bubbleSort(arr);    <span class="comment">// [0, 1, 2, 3, 5, 5, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+<p>还有另外一种写法，也放出来供对比一下（<code>i</code>值循环递增的写法）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;len<span class="number">-1</span>;i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;len<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line">            <span class="comment">// 由小到大用 &gt;， 由大到小就是 &lt; </span></span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">var</span> tmp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bubbleSort(arr);    <span class="comment">// [0, 1, 2, 3, 5, 5, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+<p>两种方式都可以，看各人喜好吧 :p</p>
 
       
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>如果文章对你有帮助，不妨小小打赏一下！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://cn.gravatar.com/userimage/109807169/4c06ac663fb5ed174811ef8d7f8fc07a.png?size=200">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://cn.gravatar.com/userimage/109807169/15f1efc943fabe7d4718d34d834ae1b6.png?size=200">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
 
     </div>
@@ -262,10 +300,58 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/03/bubble-sort/">展开全文 >></a>
-        </p>
+
       
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://qr.liantu.com/api.php?text=http://linyk.me/2018/03/03/bubble-sort/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
       
       <div class="clearfix"></div>
@@ -273,7 +359,16 @@ var _hmt = _hmt || [];
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/20/schrodinger-s-cat-draw-algorithm/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -281,512 +376,22 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-schrodinger-s-cat-draw-algorithm" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/20/schrodinger-s-cat-draw-algorithm/">一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/12/20/schrodinger-s-cat-draw-algorithm/" class="archive-article-date">
-  	<time datetime="2017-12-20T00:57:19.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-12-20
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
 
-      
-        <p>曾经看到过一篇关于程序员年会抽奖的搞笑漫画<a href="http://mp.weixin.qq.com/s/X0ms_tCvkvQkSXnAXWNJ5g" target="_blank" rel="noopener">《年会上的程序员们……》</a>，当时只是一笑了之。如今再看，却有了一个疑问：<strong>如何从一个数组中“一次性”随机抽取若干个不重复项？</strong></p>
-<p><img src="/images/draw_joke.jpg" alt="如何从一个数组中“一次性”随机抽取若干个不重复项？"></p>
-        
-          <a class="article-more-a" href="/2017/12/20/schrodinger-s-cat-draw-algorithm/#more">more >></a>
-        
-      
 
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/20/schrodinger-s-cat-draw-algorithm/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-stars-score" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/13/stars-score/">Javascript呈现星星评分效果的最简单实现</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/13/stars-score/" class="archive-article-date">
-  	<time datetime="2017-10-13T07:30:28.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-10-13
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-        <p>今天群里聊到星星评分实现的需求，突然想起来以前看过此类的一个超简单实现，花了几分钟思考重现了这一小段代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *  score为分值，范围为0-5 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stars</span>(<span class="params">score</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"★★★★★☆☆☆☆☆"</span>.substr(<span class="number">5</span> - score, <span class="number">5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stars(<span class="number">3</span>);   <span class="comment">//★★★☆☆</span></span><br></pre></td></tr></table></figure>
-      
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/13/stars-score/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-chrome-date-bug" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/31/chrome-date-bug/">new Date解析日期字符串在不同浏览器的差异</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/31/chrome-date-bug/" class="archive-article-date">
-  	<time datetime="2017-03-31T02:42:35.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-03-31
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-        <p>今天，偶然发现一个Chrome对于执行<code>new Date()</code>表达式产生的怪异现象，如下所示：</p>
-<ul>
-<li>Chrome F12控制台</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-31"</span>);     <span class="comment">//打印： Fri Mar 31 2017 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-3-31"</span>);      <span class="comment">//打印： Fri Mar 31 2017 00:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
-<p>即在这种情况下，输出的结果差别是<code>08</code>时和<code>00</code>时。而在其他浏览器是这样的：</p>
-        
-          <a class="article-more-a" href="/2017/03/31/chrome-date-bug/#more">more >></a>
-        
-      
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/31/chrome-date-bug/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-babel-usage" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/31/babel-usage/">Babel 6.0之babel-cli和babel-core的用法和区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/31/babel-usage/" class="archive-article-date">
-  	<time datetime="2017-03-30T22:12:52.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-03-31
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-        <p>在Babel 6以前，Babel是一个专注且单一的Javascript转换器，然而Babel团队的志向不仅于此，更想把Babel打造成一个平台，由各个不同的功能模块和可插拔插件组成，用于创建下一代JavaScript工具集。</p>
-<p>于是Babel 6发布了。</p>
-<p>Babel 6本身不具有转换ES6代码的功能，也不再默认内嵌支持JSX语法，这一切都需要通过安装对应的转换器插件来实现。</p>
-        
-          <a class="article-more-a" href="/2017/03/31/babel-usage/#more">more >></a>
-        
-      
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/31/babel-usage/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hexo-github-pages" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/24/hexo-github-pages/">使用Hexo，如何在多台电脑上维护和更新github pages博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/24/hexo-github-pages/" class="archive-article-date">
-  	<time datetime="2017-03-23T21:51:40.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-03-24
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-        <p>今天在公司用hexo搭好博客之后，突然有个疑问：我想要回到家继续写文章，那换了电脑之后该怎么更新博客呢？</p>
-<p>思路：<strong>使用git分支</strong>。</p>
-<p>即用个人博客仓库的<code>master</code>分支来保存博客静态页面，新建另一个分支来保存hexo部署环境目录！之后每次博客的更新就在新分支上编辑和发布（deploy），把生成的博客页面推到<code>master</code>分支上。</p>
-<p>话不多说，下面是我实践的方法（前四步是在公司电脑上，第五步是家里的电脑）：</p>
-        
-          <a class="article-more-a" href="/2017/03/24/hexo-github-pages/#more">more >></a>
-        
-      
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/24/hexo-github-pages/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-js-event-loop" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/23/js-event-loop/">转载：彻底理解JavaScript的同步、异步和事件循环(Event Loop)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/23/js-event-loop/" class="archive-article-date">
-  	<time datetime="2017-03-23T07:07:07.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-03-23
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-        <h2 id="一-单线程"><a href="#一-单线程" class="headerlink" title="一. 单线程"></a>一. 单线程</h2><p>我们常说“JavaScript是单线程的”。</p>
-<p>所谓单线程，是指在JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它<strong>主线程</strong>。</p>
-<p>但是实际上还存在其他的线程。例如：处理AJAX请求的线程、处理DOM事件的线程、定时器线程、读写文件的线程(例如在Node.js中)等等。这些线程可能存在于JS引擎之内，也可能存在于JS引擎之外，在此我们不做区分。不妨叫它们<strong>工作线程</strong>。</p>
-        
-          <a class="article-more-a" href="/2017/03/23/js-event-loop/#more">more >></a>
-        
-      
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/23/js-event-loop/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/23/hello-world/">Hello My World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/23/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-23T02:07:07.000Z" itemprop="datePublished">
-  		<i class="icon-calendar icon"></i>
-  		2017-03-23
-  	</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-        <p>终于，尘埃落定，我最终决定个人博客域名还是让<code>linyk</code>——我的名字拼音缩写——来承担这个重任！！</p>
-<p>有些卖春的女孩儿这样说：“折腾了大半个青春，该找个老实人嫁了”，我的笔记、我的思维就如同这些放荡的贱人一般，东躺躺西睡睡，如今也该有个落脚的地方了，这几乎完全是我的个人世界，不用受任何外在因素的干扰（除非github倒闭了XD）。</p>
-        
-          <a class="article-more-a" href="/2017/03/23/hello-world/#more">more >></a>
-        
-      
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/23/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
+<section id="comments">
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="排序算法：Javascript实现冒泡排序"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cysUy3hml';
+var conf = 'prod_bdf431ac70f2d1f5488b31a47a07513c';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</section>
 
 
           </div>
@@ -809,8 +414,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
