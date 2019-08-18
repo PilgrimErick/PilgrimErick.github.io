@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="林粤凯">
   <link rel="dns-prefetch" href="//linyk.me">
-  <title>一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项 | Hash的博客</title>
+  <title>排序算法：Javascript实现冒泡排序 | Hash的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script>
   (function(){
@@ -26,20 +26,18 @@
     }
   })();
   </script>
-  <meta name="description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
-<meta name="keywords" content="算法">
+  <meta name="description" content="一、冒泡原理按从小到大排列顺序的实现来举例，冒泡的过程是指： 从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）； 以上为一次冒泡过程，得到了一个最大值，然后继续开始第二次">
+<meta name="keywords" content="排序算法,冒泡排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
-<meta property="og:url" content="//linyk.me/2017/12/20/schrodinger-s-cat-draw-algorithm/index.html">
+<meta property="og:title" content="排序算法：Javascript实现冒泡排序">
+<meta property="og:url" content="//linyk.me/2017/06/05/bubble-sort/index.html">
 <meta property="og:site_name" content="Hash的博客">
-<meta property="og:description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
+<meta property="og:description" content="一、冒泡原理按从小到大排列顺序的实现来举例，冒泡的过程是指： 从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）； 以上为一次冒泡过程，得到了一个最大值，然后继续开始第二次">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="//linyk.me/images/draw_joke.jpg">
-<meta property="og:updated_time" content="2018-12-27T09:00:17.601Z">
+<meta property="og:updated_time" content="2019-08-18T10:26:45.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项">
-<meta name="twitter:description" content="曾经看到过一篇关于程序员年会抽奖的搞笑漫画《年会上的程序员们……》，当时只是一笑了之。如今再看，却有了一个疑问：如何从一个数组中“一次性”随机抽取若干个不重复项？">
-<meta name="twitter:image" content="//linyk.me/images/draw_joke.jpg">
+<meta name="twitter:title" content="排序算法：Javascript实现冒泡排序">
+<meta name="twitter:description" content="一、冒泡原理按从小到大排列顺序的实现来举例，冒泡的过程是指： 从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）； 以上为一次冒泡过程，得到了一个最大值，然后继续开始第二次">
   
     <link rel="alternative" href="/atom.xml" title="Hash的博客" type="application/atom+xml">
   
@@ -205,22 +203,22 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-schrodinger-s-cat-draw-algorithm" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-bubble-sort" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项
+      排序算法：Javascript实现冒泡排序
     </h1>
   
 
         
-        <a href="/2017/12/20/schrodinger-s-cat-draw-algorithm/" class="archive-article-date">
-  	<time datetime="2017-12-20T00:57:19.000Z" itemprop="datePublished">
+        <a href="/2017/06/05/bubble-sort/" class="archive-article-date">
+  	<time datetime="2017-06-05T12:05:38.000Z" itemprop="datePublished">
   		<i class="icon-calendar icon"></i>
-  		2017-12-20
+  		2017-06-05
   	</time>
 </a>
         
@@ -228,29 +226,20 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-         <blockquote>
-          <p><strong>版权声明</strong>：本文为博主原创精华文章，未经博主允许不得转载。</p>
-        </blockquote>
-        <br>
-      
 
       
-        <p>曾经看到过一篇关于程序员年会抽奖的搞笑漫画<a href="http://mp.weixin.qq.com/s/X0ms_tCvkvQkSXnAXWNJ5g" target="_blank" rel="noopener">《年会上的程序员们……》</a>，当时只是一笑了之。如今再看，却有了一个疑问：<strong>如何从一个数组中“一次性”随机抽取若干个不重复项？</strong></p>
-<p><img src="/images/draw_joke.jpg" alt="如何从一个数组中“一次性”随机抽取若干个不重复项？"></p>
+        <h2 id="一、冒泡原理"><a href="#一、冒泡原理" class="headerlink" title="一、冒泡原理"></a>一、冒泡原理</h2><p>按从小到大排列顺序的实现来举例，冒泡的过程是指：</p>
+<p><strong>从第一个数开始，相邻两个数之间比较，将较大的数记为a；若a处于后者则顺序不变动，不是处于后者则将其与对比的较小的数调换（如同“往上”冒一个泡）；然后重新比较a的值和其后面一位数的大小，将较大的数重新设为a，再次使a“冒泡”；反复往后比较并“冒泡”，直到a到达数列底部（“水面”）；</strong></p>
+<p>以上为一次<strong>冒泡过程</strong>，得到了一个最大值，然后继续开始第二次<strong>冒泡过程</strong>，这时只需要在排除最后一个数（已排序成功的最大值）的子数列中进行冒泡，同理将第一个数冒泡至该子数列底部。</p>
 <a id="more"></a>
-<h3 id="“一次性抽取出若干项”的实现"><a href="#“一次性抽取出若干项”的实现" class="headerlink" title="“一次性抽取出若干项”的实现"></a>“一次性抽取出若干项”的实现</h3><p>以下是我想的一个方法：</p>
-<ul>
-<li><p><strong>数组的每一项生成一个与之关联对应的随机数</strong>，由于随机数是“随机”的，我们无法预测到数组中的某个项会生成什么样的随机数，是大或是小，这对于数组每一项来说都是“公平”的。</p>
-</li>
-<li><p><strong>对所有随机数产生的集合做一个大小排序，取前5位较大值（或较小值等等自定义判断规则），即抽1次</strong>！由于第一步的随机结果，所以本次结果也是随机的。</p>
-</li>
-<li><p><strong>找到这5个随机数对应的数组项（根据第一步）</strong>，这5个数组项就是我们要的随机<strong>“抽奖结果”</strong></p>
-</li>
-</ul>
-<p>算法实现代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> drawNumber = <span class="number">5</span>;                    <span class="comment">//设置默认抽奖个数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> originList = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>];  <span class="comment">//抽奖面向的用户集合</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"> originList </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> randomNumList = [];</span><br><span class="line">    <span class="keyword">let</span> luckyList = [];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>,len=originList.length; i&lt;len; i++)&#123; <span class="comment">//每个数组项生成一个对应的随机数</span></span><br><span class="line">        randomNumList.push(&#123;</span><br><span class="line">            originIndex: i,</span><br><span class="line">            randomNum: <span class="built_in">Math</span>.random()</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    randomNumList.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>)</span>&#123;      <span class="comment">//按随机数大小由大到小排序</span></span><br><span class="line">        <span class="keyword">return</span> b.randomNum - a.randomNum;   </span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//console.log(randomNumList.slice(0));</span></span><br><span class="line"></span><br><span class="line">    randomNumList.length = drawNumber;       <span class="comment">//截取前5个项</span></span><br><span class="line">    luckyList = randomNumList.map(<span class="function"><span class="keyword">function</span>(<span class="params">relation, i</span>)</span>&#123;<span class="comment">//找到5个随机数项对应的数组项作为抽奖结果</span></span><br><span class="line">        <span class="keyword">return</span> originList[relation.originIndex];</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> luckyList;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">draw( originList );      <span class="comment">//结果：随机的五个项构成的一个数组</span></span><br></pre></td></tr></table></figure>
-<p>在随机数生成以后，在进行“排序截取”前，谁都无法得知最终的结果是怎样的。只有在程序进行排序截取之后，结果才能得知，基本实现了公平的随机性。</p>
-<p>如果有别的实现“一次性”抽取的算法，欢迎评论交流！</p>
+<p>……</p>
+<p>重复上述冒泡循环，直到倒数第二个数冒泡完成（倒数第二个数排序完成，则剩下的最后一个数顺序也就确定了），假设数列一共有n个数，则需要进行n-1次循环的<strong>冒泡过程</strong>。</p>
+<p>每次<strong>冒泡过程</strong>的具体逻辑都是一致的，也是一个循环，即随着当前（子）数列索引<code>j</code>（假设从0开始）的递增，循环判断相邻的两项大小（进行冒泡），直到当前索引<code>j</code>等于当前（子）数列个数减1（注意“当前”的冒泡数列的长度是递减的）。</p>
+<h2 id="二、算法实现"><a href="#二、算法实现" class="headerlink" title="二、算法实现"></a>二、算法实现</h2><p>根据以上逻辑，我们可以写出以下的代码实现（<code>i</code>值循环递减的写法）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=len<span class="number">-1</span>; i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            <span class="comment">// 由小到大用 &gt;， 由大到小就是 &lt; </span></span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">var</span> tmp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bubbleSort(arr);    <span class="comment">// [0, 1, 2, 3, 5, 5, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+<p>还有另外一种写法，也放出来供对比一下（<code>i</code>值循环递增的写法）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;len<span class="number">-1</span>;i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;len<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line">            <span class="comment">// 由小到大用 &gt;， 由大到小就是 &lt; </span></span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">var</span> tmp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bubbleSort(arr);    <span class="comment">// [0, 1, 2, 3, 5, 5, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+<p>两种方式都可以，看各人喜好吧 :p</p>
 
       
 
@@ -298,7 +287,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">排序算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">冒泡排序</a>
         		</li>
       		
 		</ul>
@@ -354,7 +347,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://qr.liantu.com/api.php?text=http://linyk.me/2017/12/20/schrodinger-s-cat-draw-algorithm/" alt="微信分享二维码">
+      <img src="http://qr.liantu.com/api.php?text=http://linyk.me/2017/06/05/bubble-sort/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -369,18 +362,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/03/03/bubble-sort/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/13/stars-score/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          排序算法：Javascript实现冒泡排序
+          Javascript呈现星星评分效果的最简单实现
         
       </div>
     </a>
   
   
-    <a href="/2017/10/13/stars-score/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Javascript呈现星星评分效果的最简单实现</div>
+    <a href="/2017/03/31/chrome-date-bug/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">new Date解析日期字符串在不同浏览器的差异</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -399,7 +392,7 @@ var _hmt = _hmt || [];
 
 <section id="comments">
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="一个简单抽奖算法：从数组中“一次性”随机抽取若干个不重复项"></div>
+<div id="SOHUCS" sid="排序算法：Javascript实现冒泡排序"></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cysUy3hml';
