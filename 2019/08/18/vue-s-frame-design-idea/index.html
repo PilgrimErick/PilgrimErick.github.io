@@ -34,7 +34,7 @@
 <meta property="og:site_name" content="Hash的博客">
 <meta property="og:description" content="文章开始先简单介绍VDOM的概念。VDOM全称是Virtual DOM，即虚拟DOM。本质上是一个树形数据结构的JS Object，该树形结构的每个对象节点都包含有一些key-value，如标签名、Attributes、节点内容等，类比于真实DOM节点所具有的属性。那么VDOM的作用是什么？ 技术最终都是为业务而服务的，VDOM也不过是一种技术手段，用于下面解决这种场景： 随着时间的推移，在项目业">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-08-18T03:09:18.206Z">
+<meta property="og:updated_time" content="2019-08-18T03:10:06.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从VDOM切入浅谈Vue的框架设计思想">
 <meta name="twitter:description" content="文章开始先简单介绍VDOM的概念。VDOM全称是Virtual DOM，即虚拟DOM。本质上是一个树形数据结构的JS Object，该树形结构的每个对象节点都包含有一些key-value，如标签名、Attributes、节点内容等，类比于真实DOM节点所具有的属性。那么VDOM的作用是什么？ 技术最终都是为业务而服务的，VDOM也不过是一种技术手段，用于下面解决这种场景： 随着时间的推移，在项目业">
@@ -235,7 +235,8 @@ var _hmt = _hmt || [];
 基于这种情况，最先想到的是方案是封装一个库，使用createDocumentFragment创建一个目标DOM片段，然后和现有的DOM进行比较（Diff），找出实际需要更新的节点，再把实际节点渲染到文档中。但是这种方案问题依然存在，因为遍历DOM进行diff本身就是一个开销巨大的事情。于是乎，VDOM出现了。
 
 众所周知DOM操作相对于纯JS执行来说，是十分慢的【1】。因此VDOM的作用就是取代这个真实`DOM Diff`过程，改为`VDOM Diff`，从操作DOM改成操作JS Object，速度大大提升！
-</code></pre><p>VDOM的实现并不比经过优化的手动直接操作DOM更快，原因在于其还有额外的Diff算法损耗；但好处在于它有更好的可维护性的同时还能提供不错的性能，毕竟人力无法永远保持高度的专注力去优化繁杂的业务逻辑代码。</p>
+</code></pre><a id="more"></a>
+<p>VDOM的实现并不比经过优化的手动直接操作DOM更快，原因在于其还有额外的Diff算法损耗；但好处在于它有更好的可维护性的同时还能提供不错的性能，毕竟人力无法永远保持高度的专注力去优化繁杂的业务逻辑代码。</p>
 <p>VDOM的主流表现形式之一是<em>JSX</em>，JSX的写法和JS一样动态灵活，非常适合构建复杂的应用，但这种灵活也因此产生了一个短板：正是因为JS代码写法多变，使得框架内部无法安全精准地预判需要更新的具体地方，因此需要一轮树型Diff的遍历，才敢保证安全地触发局部更新。</p>
 <p><em>模板</em>是VDOM实现的另外一种表现形式，优点是写法有规则，受约束，结构清晰直观；相对的缺点就是灵活性不足，在某些极端场景下难以完整发挥JS的能力，会让人感到“憋屈”。</p>
 <p>综上对比，纯JSX表现的VDOM实现会存在一个问题，即依赖的运行时代码逻辑要多一些，因为为了能做出更多的DOM更新优化（毕竟DOM性能损耗才是大头），需要考虑的东西更多以保证性能，因此打包后代码量也会大一些。而纯模板实现的优缺点也是很明显的，由于代码写法都在规则之内，因此可以在优化时做出更多的预判，而预判优化是可以放在预编译阶段完成的，因此也使得运行时代码相对少些，但是，模板实现形式的不灵活性是个硬伤，在应对某些复杂业务上偶尔会余力不足。</p>
