@@ -235,7 +235,7 @@ var _hmt = _hmt || [];
 基于这种情况，最先想到的是方案是封装一个库，使用createDocumentFragment创建一个目标DOM片段，然后和现有的DOM进行比较（Diff），找出实际需要更新的节点，再把实际节点渲染到文档中。但是这种方案问题依然存在，因为遍历DOM进行diff本身就是一个开销巨大的事情。于是乎，VDOM出现了。
 
 众所周知DOM操作相对于纯JS执行来说，是十分慢的【1】。因此VDOM的作用就是取代这个真实`DOM Diff`过程，改为`VDOM Diff`，从操作DOM改成操作JS Object，速度大大提升！
-</code></pre>
+</code></pre><p>VDOM的实现并不比经过优化的手动直接操作DOM更快，原因在于其还有额外的Diff算法损耗；但好处在于它有更好的可维护性的同时还能提供不错的性能，毕竟人力无法永远保持高度的专注力去优化繁杂的业务逻辑代码。</p>
         
           <a class="article-more-a" href="/2019/08/18/vue-s-frame-design-idea/#more">more >></a>
         
